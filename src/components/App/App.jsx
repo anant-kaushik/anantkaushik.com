@@ -4,7 +4,7 @@ import routes from "routes";
 import "./App.css";
 
 import "assets/fonts/flaticon/flaticon.css";
-import "assets/fonts/font-awesome/font-awesome.min.css";
+import "assets/fonts/font-awesome/css/font-awesome.min.css";
 class App extends Component {
   getRoutes = routes => {
     return routes.map((prop, key) => {
