@@ -5,6 +5,7 @@ import "./App.css";
 
 import "assets/fonts/flaticon/flaticon.css";
 import "assets/fonts/font-awesome/css/font-awesome.min.css";
+import "assets/css/reset.css";
 class App extends Component {
   getRoutes = routes => {
     return routes.map((prop, key) => {
@@ -13,10 +14,11 @@ class App extends Component {
   };
   render() {
     return (
-      <Router>
-        <div className="App" />
-        <Switch>{this.getRoutes(routes)}</Switch>
-      </Router>
+      <div className="App">
+        <Router>
+          <Switch>{this.getRoutes(routes)}</Switch>
+        </Router>
+      </div>
     );
   }
 }
