@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import "./Profile.css";
 import { RoundButton } from "components";
 import glasses from "assets/images/glasses.png";
+import anant from "assets/images/profile.jpg";
 
 console.log(glasses);
 
-const PROFILE_PHOTO =
-  "https://media.licdn.com/dms/image/C4E03AQFw-hMffdPSog/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=gY2RiPCZJTYXR9TsDCmzsOE6rYHTEflhow9AzuIceCQ";
+const PROFILE_PHOTO = anant;
 
 const ProfileName = ({ name, job }) => (
   <div className="profile-name">
@@ -70,9 +70,9 @@ const DownloadCvButton = () => (
 class Profile extends Component {
   data = {
     name: "Anant Kaushik",
-    job: "CMU Grad Student",
+    job: "Masters Student",
     dob: "01 August 1996",
-    email: "anantk@andrew.cmu.edu",
+    email: "anantk@cs.cmu.edu",
     skype: "live:anantkaushik.me"
   };
 
