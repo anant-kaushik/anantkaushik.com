@@ -1,0 +1,24 @@
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding: 0 3px;
+}
+  
+.section-title h1,
+.section-title h2,
+.section-title h3,
+.section-title h4,
+.section-title h5 {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+  
+.section-title span {
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    bottom: 0;
+    opacity: 0.4;
+    left: 0;
+}
