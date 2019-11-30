@@ -8,3 +8,22 @@
   padding: 1px 29px;
   line-height: 35px;
 }
+
+.site-btn i {
+  color: #000;
+  background: #fff;
+  margin-left: 15px;
+  border-radius: 50px;
+  font-size: 11px;
+  height: 27px;
+  width: 27px;
+  float: right;
+  text-align: center;
+  line-height: 29px;
+  margin-top: 4px;
+}
+
+.site-btn.icon {
+  text-align: left;
+  padding: 1px 6px 1px 19px;
+}

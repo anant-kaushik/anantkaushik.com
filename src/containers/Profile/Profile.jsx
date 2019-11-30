@@ -4,10 +4,10 @@ import "./Profile.css";
 import { RoundButton } from "components";
 import glasses from "assets/images/glasses.png";
 import anant from "assets/images/profile.jpg";
-
-console.log(glasses);
+import resume from "assets/resume/Resume.pdf";
 
 const PROFILE_PHOTO = anant;
+const RESUME = resume;
 
 const ProfileName = ({ name, job }) => (
   <div className="profile-name">
@@ -54,18 +54,28 @@ const ProfileInformation = ({ name, dob, job, email, skype }) => (
   </ul>
 );
 
-const DownloadCvButton = () => (
-  <div class="col-md-12">
-    <RoundButton
-      style={{
-        margin: "18px auto 30px",
-        display: "block"
-      }}
-    >
-      Download Cv <i class="fa fa-download" aria-hidden="true" />
-    </RoundButton>
-  </div>
-);
+const DownloadCvButton = () => {
+  const startDownload = () => {
+    let a = document.createElement('a');
+    a.href = RESUME;
+    a.download = "anant_cmu_resume";
+    a.click();
+  };
+
+  return (
+    <div class="col-md-12">
+      <RoundButton
+        style={{
+          margin: "18px auto 30px",
+          display: "block"
+        }}
+        onClick={startDownload}
+      >
+        Resume <i className="fa fa-download" aria-hidden="true" />
+      </RoundButton>
+    </div>
+  )
+};
 
 class Profile extends Component {
   data = {
