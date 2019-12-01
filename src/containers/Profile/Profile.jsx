@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import "./Profile.css";
 import { RoundButton } from "components";
-import glasses from "assets/images/glasses.png";
 import anant from "assets/images/profile.jpg";
 import resume from "assets/resume/Resume.pdf";
 
