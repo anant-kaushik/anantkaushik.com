@@ -38,7 +38,7 @@ const Skills = ({ skills }) => (
         <SectionTitle title="Skills" />
         <Row className="top_45">
             {skills.map(skill => (
-                <Skill title={skill.title} desc={skill.desc} />
+                <Skill {...skill} />
             ))}
         </Row>
     </Section>
@@ -48,19 +48,23 @@ const data = {
     skills: [
         {
             title: "Web Development",
-            desc: "I have been working on web design for past 1 year."
+            desc: "Developed scalable web applications with the latest frameworks and technologies",
+            icon: "flaticon-loading"
         },
         {
             title: "Mobile  Development ",
-            desc: "I have been working on android and iOS platform for 2 years."
+            desc: "Experienced in Android development using Java. Created multiple applications and SDK's",
+            icon: "flaticon-responsive"
         },
         {
             title: "System Architecture",
-            desc: "I have been designing end-to-end architecture for 2 years."
+            desc: "Designing end-to-end scalable architecture. Will be studying scable systems and Architecture in the spring semester",
+            icon: "flaticon-planning"
         },
         {
             title: "Team Management",
-            desc: "I have been managing team using scrum for 1 year."
+            desc: "Experienced in managing team using agile processes like scrum",
+            icon: "flaticon-brainstorming"
         }
     ]
 }

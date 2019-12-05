@@ -20,3 +20,8 @@
     font-weight: 400 !important;
     line-height: 18px !important;
 }
+
+.skill-icon i:before {
+    font-size: 44px;
+    margin-left: 0;
+}
