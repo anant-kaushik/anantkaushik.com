@@ -18,7 +18,7 @@ const Desc = ({ text }) => (
 
 const Skill = ({ title, desc, icon }) => (
     <Col md="3" sm="6" xs="12">
-        <div className="skill" >
+        <div className="skill bottom_30" >
             <SkillIcon icon={icon} />
             <SkillTitle title={title} />
             <Desc text={desc} />
