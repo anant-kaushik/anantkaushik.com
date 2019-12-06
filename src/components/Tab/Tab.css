@@ -1,0 +1,18 @@
+.nav-tab {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    padding: 0 10px;
+    line-height: 73px;
+    display: block;
+}
+  
+.nav-tab:hover {
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+}
+  
+.nav-tab:after {
+    border-right: 1px solid #dfdfdf;
+}

@@ -19,6 +19,11 @@ import Skill from "./Skill/Skill.jsx";
 import LinkRefer from "./LinkRefer/LinkRefer.jsx";
 
 // #########
+// NavBar atoms
+// #########
+import Tab from "./Tab/Tab.jsx";
+
+// #########
 // Containers
 // #########
 import Wrapper from "./Wrapper/Wrapper.jsx";
@@ -34,6 +39,8 @@ export {
   Paragragh,
   Skill,
   LinkRefer,
+  //Navbar atoms
+  Tab,
   //Containers
   Wrapper
 };
