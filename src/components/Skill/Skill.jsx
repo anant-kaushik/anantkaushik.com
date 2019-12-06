@@ -16,9 +16,9 @@ const Desc = ({ text }) => (
     <Paragragh className="skill-desc">{text}</Paragragh>
 )
 
-const Skill = ({ title, desc, icon }) => (
-    <Col md="3" sm="6" xs="12">
-        <div className="skill bottom_30" >
+const Skill = ({ className, title, desc, icon }) => (
+    <Col md="6" xs="12">
+        <div className={"skill " + className} >
             <SkillIcon icon={icon} />
             <SkillTitle title={title} />
             <Desc text={desc} />

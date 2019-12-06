@@ -37,36 +37,43 @@ const Skills = ({ skills }) => (
     <Section background="#fafafa">
         <SectionTitle title="Skills" />
         <Row className="top_45">
-            {skills.map(skill => (
-                <Skill {...skill} />
+            {skills.top.map((skill, index) => (
+                <Skill className="bottom_30" {...skill} key={index} />
+            ))}
+            {skills.bottom.map((skill, index) => (
+                <Skill {...skill} key={index} />
             ))}
         </Row>
     </Section>
 )
 
 const data = {
-    skills: [
-        {
-            title: "Web Development",
-            desc: "Developed scalable web applications with the latest frameworks and technologies",
-            icon: "flaticon-loading"
-        },
-        {
-            title: "Mobile  Development ",
-            desc: "Experienced in Android development using Java. Created multiple applications and SDK's",
-            icon: "flaticon-responsive"
-        },
-        {
-            title: "System Architecture",
-            desc: "Designing end-to-end scalable architecture. Will be studying scable systems and Architecture in the spring semester",
-            icon: "flaticon-planning"
-        },
-        {
-            title: "Team Management",
-            desc: "Experienced in managing team using agile processes like scrum",
-            icon: "flaticon-brainstorming"
-        }
-    ]
+    skills: {
+        top: [
+            {
+                title: "Web Development",
+                desc: "Developed scalable web applications with the latest frameworks and technologies",
+                icon: "flaticon-loading"
+            },
+            {
+                title: "Mobile  Development ",
+                desc: "Experienced in Android development using Java. Created multiple applications and SDK's",
+                icon: "flaticon-responsive"
+            }
+        ],
+        bottom: [
+            {
+                title: "System Architecture",
+                desc: "Designing end-to-end scalable architecture. Will be studying scable systems and Architecture in the spring semester",
+                icon: "flaticon-planning"
+            },
+            {
+                title: "Team Management",
+                desc: "Experienced in managing team using agile processes like scrum",
+                icon: "flaticon-brainstorming"
+            }
+        ]
+    }
 }
 
 class Home extends Component {
