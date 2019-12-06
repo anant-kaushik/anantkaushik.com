@@ -62,7 +62,7 @@ const DownloadCvButton = () => {
   };
 
   return (
-    <div class="col-md-12">
+    <div className="col-md-12">
       <RoundButton
         style={{
           margin: "18px auto 30px",
