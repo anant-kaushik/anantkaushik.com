@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import './Skill.css';
 import { Col } from "react-bootstrap";
@@ -25,5 +26,11 @@ const Skill = ({ className, title, desc, icon }) => (
         </div>
     </Col >
 )
+
+Skill.propTypes = {
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired
+}
 
 export default Skill;
