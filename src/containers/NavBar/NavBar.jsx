@@ -11,7 +11,6 @@ const Tabs = () => (
         <li className="tab">
             <a className="home-btn" href="#home">
                 <i className="fa fa-home" aria-hidden="true"></i>
-                <span style={{ display: "none" }}>Cleacer way to remove a warning !!!</span>
             </a>
         </li>
     </ul>

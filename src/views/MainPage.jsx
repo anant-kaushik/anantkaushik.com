@@ -1,14 +1,21 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import { Switch, Route } from "react-router-dom";
+import routes from "routes";
 
 import { Wrapper } from "components";
 import {
   Profile,
-  Home,
   NavBar
 } from "containers";
 
-const HomePage = () => (
+const getRoutes = routes => (
+  <Switch>
+    {routes.map((prop, key) => <Route path={prop.path} component={prop.component} key={key} />)}
+  </Switch>
+);
+
+const MainPage = () => (
   <Wrapper className="top_60">
     <Row>
       <Col lg="3" md="12">
@@ -16,10 +23,10 @@ const HomePage = () => (
       </Col>
       <Col lg="9" md="12">
         <NavBar />
-        <Home />
+        {getRoutes(routes)}
       </Col>
     </Row>
   </Wrapper>
 );
 
-export default HomePage;
+export default MainPage;

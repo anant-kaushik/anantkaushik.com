@@ -1,9 +1,9 @@
-import HomePage from "views/HomePage.jsx";
+import { Home } from "containers";
 
 const routes = [
   {
     path: "/",
-    component: HomePage
+    component: Home
   }
 ];
 
