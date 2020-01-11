@@ -4,6 +4,7 @@ import "./Profile.css";
 import { RoundButton } from "components";
 import anant from "assets/images/profile.jpg";
 import resume from "assets/resume/Resume.pdf";
+import { data } from "utils";
 
 const PROFILE_PHOTO = anant;
 const RESUME = resume;
@@ -77,20 +78,13 @@ const DownloadCvButton = () => {
 };
 
 class Profile extends Component {
-  data = {
-    name: "Anant Kaushik",
-    job: "Masters Student",
-    dob: "01 August 1996",
-    email: "anantk@cs.cmu.edu",
-    skype: "live:anantkaushik.me"
-  };
 
   render() {
     return (
       <div className="profile">
-        <ProfileName {...this.data} />
+        <ProfileName {...data} />
         <ProfileImage src={PROFILE_PHOTO} />
-        <ProfileInformation {...this.data} />
+        <ProfileInformation {...data} />
         <DownloadCvButton />
       </div>
     );

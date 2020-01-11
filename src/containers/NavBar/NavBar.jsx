@@ -4,8 +4,9 @@ import { withRouter } from "react-router-dom";
 
 import "./NavBar.css";
 import routes from "routes";
+import { data } from "utils";
 
-const EMAIL = "anantk@cs.cmu.edu";
+const EMAIL = data.email;
 
 const TabButton = ({ history, route }) => (
     <li className={"tab" + (history.location.pathname === route.path ? " active" : "")}>

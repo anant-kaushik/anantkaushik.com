@@ -9,6 +9,7 @@ import {
     LinkRefer
 } from "components";
 import { Row } from "react-bootstrap";
+import { data } from "utils";
 
 const AboutMe = ({ about }) => (
     <Section>
@@ -47,34 +48,6 @@ const Skills = ({ skills }) => (
     </Section>
 )
 
-const data = {
-    skills: {
-        top: [
-            {
-                title: "Web Development",
-                desc: "Developed scalable web applications with the latest frameworks and technologies",
-                icon: "flaticon-loading"
-            },
-            {
-                title: "Mobile  Development ",
-                desc: "Experienced in Android development using Java. Created multiple applications and SDK's",
-                icon: "flaticon-responsive"
-            }
-        ],
-        bottom: [
-            {
-                title: "System Architecture",
-                desc: "Designing end-to-end scalable architecture. Will be studying scable systems and Architecture in the spring semester",
-                icon: "flaticon-planning"
-            },
-            {
-                title: "Team Management",
-                desc: "Experienced in managing team using agile processes like scrum",
-                icon: "flaticon-brainstorming"
-            }
-        ]
-    }
-}
 
 class Home extends Component {
     render() {
