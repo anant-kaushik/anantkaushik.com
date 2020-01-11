@@ -1,9 +1,17 @@
-import { Home } from "containers";
+import { Home, Resume } from "containers";
+
 
 const routes = [
   {
-    path: "/",
-    component: Home
+    path: "/home",
+    name: "HOME",
+    component: Home,
+    home: true
+  },
+  {
+    path: "/resume",
+    name: "RESUME",
+    component: Resume
   }
 ];
 

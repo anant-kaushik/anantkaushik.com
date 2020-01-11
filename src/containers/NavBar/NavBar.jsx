@@ -1,19 +1,35 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
+import { withRouter } from "react-router-dom";
 
 import "./NavBar.css";
+import routes from "routes";
 
 const EMAIL = "anantk@cs.cmu.edu";
 
+const TabButton = ({ history, route }) => (
+    <li className={"tab" + (history.location.pathname === route.path ? " active" : "")}>
+        <button
+            className={route.home ? "home-btn" : ""}
+            onClick={() => {
+                history.push(route.path);
+            }}>
+            {route.home ?
+                <i className="fa fa-home" aria-hidden="true" /> :
+                route.name
+            }
+        </button>
+    </li>
+);
 
-const Tabs = () => (
+const Tabs = ({ history, routes }) => (
     <ul className="tabs">
-        <li className="tab">
-            <a className="home-btn" href="#home">
-                <i className="fa fa-home" aria-hidden="true"></i>
-            </a>
-        </li>
-    </ul>
+        {routes.map(route =>
+            <TabButton
+                history={history}
+                route={route} />
+        )}
+    </ul >
 )
 
 const Links = () => (
@@ -37,7 +53,9 @@ class NavBar extends Component {
         return (
             <Nav>
                 <Col md="8" sm="8" xs="4">
-                    <Tabs />
+                    <Tabs
+                        history={this.props.history}
+                        routes={routes} />
                 </Col>
                 <Col md="4" sm="4" xs="8">
                     <Links />
@@ -47,4 +65,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import routes from "routes";
 
 import { Wrapper } from "components";
@@ -12,6 +12,7 @@ import {
 const getRoutes = routes => (
   <Switch>
     {routes.map((prop, key) => <Route path={prop.path} component={prop.component} key={key} />)}
+    <Redirect from="/" to="/home" />
   </Switch>
 );
 
