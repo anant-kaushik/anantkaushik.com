@@ -21,12 +21,12 @@ const AboutMe = ({ about }) => (
             <br />
             Before joining CMU, I was the Lead developer at Zerone Microsystems Private Limited, one of the four Indian startups selected for the Anthill Ventures’ A- Scale program which was founded by the team of a former KPMG CEO and Partner.
             I worked on the core technology and led the development of several use - cases which included an
+            <LinkRefer link="http://zpi.cash"> payment app</LinkRefer>,
             <LinkRefer link="http://conyct.com"> identity exchange app</LinkRefer>, and
-            <LinkRefer link="http://conyct.com/vms"> visitor management web and mobile application</LinkRefer>,
-            <LinkRefer link="http://zpi.cash"> payment exchange app</LinkRefer>.
+            <LinkRefer link="http://conyct.com/vms"> visitor management web and mobile application</LinkRefer>
             <br />
             <br />
-            Through my Master's, I am trying to learn the fundamentals of software engineering and what it truly means to create a scalable system from scratch.
+            Through my Master's, I am trying to learn the fundamentals of software engineering and what it truly means to create a scalable system and manage the team and the life cycle of the product. My Courses include Managing Software Development, Models of Software Engineering
             <br />
             <br />
             Apart from this, I have a love for startups and creative innovations. My elective Entrepreneurship and Innovation in Technology allowed me to connect with cutting-edge startup CEOs, VCs, and Angels which has helped me learn about the other side of the coin straight from the horse's mouth.
