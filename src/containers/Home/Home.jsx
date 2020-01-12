@@ -53,7 +53,7 @@ class Home extends Component {
     render() {
         return (
             <Content>
-                <div id="home">
+                <div>
                     <AboutMe />
                     <Skills skills={data.skills} />
                 </div>

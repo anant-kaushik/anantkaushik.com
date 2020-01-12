@@ -99,6 +99,10 @@ html {
   padding-bottom: 60px;
 }
 
+.no_margin {
+  margin: 0px !important;
+}
+
 @media (max-width: 767px) {
   .hidden-xs {
     display: none !important;

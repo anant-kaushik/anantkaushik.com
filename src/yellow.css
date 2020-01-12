@@ -36,7 +36,7 @@ ul.profile-information li:before{
 	color:#000 !important;
 }
 
-.timeline li:before, ul.profile-information li:before{
+.timeline li:before, ul.profile-information li:before, li .photo_link img{
 	border-color: #ffb100 !important;
 }
 
