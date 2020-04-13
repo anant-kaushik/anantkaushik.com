@@ -121,3 +121,20 @@ ul.profile-information li:first-child:after {
   margin: 16px -15px;
   background-size: 27px 10px;
 }
+
+@media (max-width: 991px) {
+  ul.profile-information li:first-child {
+    padding-bottom: 10px;
+    padding-left: 30px;
+  }
+
+  ul.profile-information {
+    list-style: none;
+    margin: 0 auto 30px;
+    display: table;
+  }
+
+  .profile {
+    padding-bottom: 30px;
+  }
+}

@@ -56,7 +56,7 @@ const ProfileInformation = ({ name, dob, job, email, skype }) => (
 
 const DownloadCvButton = () => {
   const startDownload = () => {
-    let a = document.createElement('a');
+    let a = document.createElement("a");
     a.href = RESUME;
     a.download = "anant_cmu_resume";
     a.click();
@@ -67,18 +67,17 @@ const DownloadCvButton = () => {
       <RoundButton
         style={{
           margin: "18px auto 30px",
-          display: "block"
+          display: "block",
         }}
         onClick={startDownload}
       >
         Resume <i className="fa fa-download" aria-hidden="true" />
       </RoundButton>
     </div>
-  )
+  );
 };
 
 class Profile extends Component {
-
   render() {
     return (
       <div className="profile">
