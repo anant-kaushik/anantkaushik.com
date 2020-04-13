@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { A } from "components";
 import { Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 
@@ -39,20 +40,20 @@ const Tabs = ({ history, routes }) => (
 
 const SocialIcons = ({ github, linkedin }) => (
   <div className="hidden-md social-icons pull-right">
-    <a className="gh" href={github.href} target="_blank">
+    <A className="gh" href={github.href}>
       <i className="fa fa-github" aria-hidden="true"></i>
-    </a>
-    <a className="ld" href={linkedin.href} target="_blank">
+    </A>
+    <A className="ld" href={linkedin.href}>
       <i className="fa fa-linkedin" aria-hidden="true"></i>
-    </a>
+    </A>
   </div>
 );
 
 const Links = ({ links }) => (
   <div>
-    <a href={"mailto:" + EMAIL} className="pull-right site-btn icon hidden-xs">
+    <A href={"mailto:" + EMAIL} className="pull-right site-btn icon hidden-xs">
       Mail<i className="fa fa-paper-plane" aria-hidden="true"></i>
-    </a>
+    </A>
     <SocialIcons {...links.socials} />
   </div>
 );

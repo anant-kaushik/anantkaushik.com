@@ -28,6 +28,16 @@ import Tab from "./Tab/Tab.jsx";
 // #########
 import Wrapper from "./Wrapper/Wrapper.jsx";
 
+// #########
+// Footers
+// #########
+import Footer from "./Footer/Footer.jsx";
+
+// #########
+// Links
+// #########
+import A from "./A/A.jsx";
+
 export {
   App,
   //Custom Buttons
@@ -42,5 +52,9 @@ export {
   //Navbar atoms
   Tab,
   //Containers
-  Wrapper
+  Wrapper,
+  //Footer
+  Footer,
+  // Links
+  A,
 };

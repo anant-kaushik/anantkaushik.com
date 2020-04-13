@@ -3,15 +3,14 @@ import { Row, Col } from "react-bootstrap";
 import { Switch, Route, Redirect } from "react-router-dom";
 import routes from "routes";
 
-import { Wrapper } from "components";
-import {
-  Profile,
-  NavBar
-} from "containers";
+import { Wrapper, Footer } from "components";
+import { Profile, NavBar } from "containers";
 
-const getRoutes = routes => (
+const getRoutes = (routes) => (
   <Switch>
-    {routes.map((prop, key) => <Route path={prop.path} component={prop.component} key={key} />)}
+    {routes.map((prop, key) => (
+      <Route path={prop.path} component={prop.component} key={key} />
+    ))}
     <Redirect from="/" to="/home" />
   </Switch>
 );
@@ -25,6 +24,7 @@ const MainPage = () => (
       <Col lg="9" md="12">
         <NavBar />
         {getRoutes(routes)}
+        <Footer />
       </Col>
     </Row>
   </Wrapper>
