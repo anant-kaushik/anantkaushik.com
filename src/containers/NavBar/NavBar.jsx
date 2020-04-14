@@ -39,7 +39,7 @@ const Tabs = ({ history, routes }) => (
 );
 
 const SocialIcons = ({ github, linkedin }) => (
-  <div className="hidden-md social-icons pull-right">
+  <div className="social-icons pull-right">
     <A className="gh" href={github.href}>
       <i className="fa fa-github" aria-hidden="true"></i>
     </A>
@@ -70,10 +70,10 @@ class NavBar extends Component {
   render() {
     return (
       <Nav>
-        <Col md="8" sm="8" xs="4">
+        <Col md="8" sm="8" xs="8">
           <Tabs history={this.props.history} routes={routes} />
         </Col>
-        <Col md="4" sm="4" xs="8">
+        <Col md="4" sm="4" xs="4">
           <Links links={data.links} />
         </Col>
       </Nav>

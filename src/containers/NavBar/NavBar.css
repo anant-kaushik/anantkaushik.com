@@ -111,8 +111,38 @@ header nav .menuout {
   transition: all ease 0.2s;
 }
 
+header nav .hamburger {
+  font-size: 20px;
+  margin-right: 23px;
+  cursor: pointer;
+  line-height: 71px;
+  border-left: solid 1px #eaeaea;
+  padding-left: 21px;
+}
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+  header nav {
+    margin-top: 30px;
+  }
+
+  nav .social-icons {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
-  header {
-    margin-top: 30px !important;
+  header nav {
+    margin-top: 30px;
+  }
+
+  .social-icons {
+    margin-right: 14px;
+    line-height: 67px;
+  }
+}
+
+@media (max-width: 321px) {
+  .social-icons {
+    display: none;
   }
 }
