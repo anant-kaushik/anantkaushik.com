@@ -48,6 +48,7 @@ const data = {
         link: "https://www.cmu.edu/",
       },
       title: "Graduate Teaching Assitant",
+      company: "Carnegie Mellon University",
       duration: "Jan 2020 - Present",
       summary:
         "Working with Babs Carryer in Entrepreneurship and Innovation in Technology (14815). Mentored students on their “Apprentice Project” and “My Startup” projects.",
@@ -59,6 +60,7 @@ const data = {
         link: "http://www.zup.cash",
       },
       title: "Lead Developer",
+      company: "Zerone Microsystems",
       duration: "Nov 2018 - May 2019",
       summary:
         "Led the development of the initial version of ZUP payments. Created the swipe2.0 protcol for faster transfer of information within smartphone (Android and iOS).",
@@ -92,6 +94,7 @@ const data = {
         link: "https://www.gaia.in/index.html",
       },
       title: "Software Engineer Intern",
+      company: "Gaia Smart Cities",
       duration: "Jun - Jul 2016",
       summary:
         "Developed an Android application for a prototype smart scale. Mentored fellow developers on Android applications",
@@ -105,7 +108,8 @@ const data = {
         alt: "Carnegie Mellon University",
         link: "https://www.cmu.edu/",
       },
-      title: "Carnegie Mellon University | Masters",
+      university: "Carnegie Mellon University",
+      level: "Masters",
       duration: "May 2019 - Present",
       summary:
         "Pursuing Masters in Software Engineering in School of Computer Science.",
@@ -116,7 +120,8 @@ const data = {
         alt: "Guru Gobind Singh Indraprastha University ",
         link: "http://www.ipu.ac.in/",
       },
-      title: "GGSIPU | BTech",
+      university: "Guru Gobind Singh IPU",
+      level: "Bachelor's",
       duration: "Aug 2013 - Jul 2017",
       summary:
         "Graduated in first division in Computer Science and Engineering",
