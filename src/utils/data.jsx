@@ -144,7 +144,7 @@ const data = {
     {
       title: "Ubiquitously controlled personalized smartlock",
       info:
-        "2017 International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud)(I-SMAC)",
+        "2017 International Conference on I-SMAC",
       image: {
         src: ublock,
         alt: "Smart lock",
