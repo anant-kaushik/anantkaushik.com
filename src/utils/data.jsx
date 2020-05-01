@@ -2,6 +2,7 @@ import cmu from "assets/images/cmu_dogo.jpg";
 import zup from "assets/images/zup.png";
 import gaia from "assets/images/gaia_logo.png";
 import ipu from "assets/images/ipu_logo.png";
+import ublock from "assets/images/smart_lock.jpg";
 
 const data = {
   name: "Anant Kaushik",
@@ -138,6 +139,19 @@ const data = {
       },
     },
   },
+
+  papers: [
+    {
+      title: "Ubiquitously controlled personalized smartlock",
+      info:
+        "2017 International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud)(I-SMAC)",
+      image: {
+        src: ublock,
+        alt: "Smart lock",
+      },
+      link: "https://ieeexplore.ieee.org/document/8058266"
+    },
+  ],
 };
 
 export default data;

@@ -102,3 +102,109 @@ ul.timeline {
   border: 0;
   margin-left: 2px;
 }
+
+.papers-wrapper {
+  padding-top: 25px !important;
+}
+
+.cbp-l-loadMore-link.site-btn {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  border: 0 !important;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  padding: 1px 29px !important;
+  line-height: 35px !important;
+}
+
+.cbp-item-wrapper {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+  -webkit-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+  -moz-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+  /*    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;*/
+}
+
+.cbp-item-wrapper:hover {
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  box-shadow: 0px 0px 20px 0px rgba(4, 6, 4, 0.08);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(4, 6, 4, 0.08);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(4, 6, 4, 0.08);
+}
+
+.cbp-item figure img,
+.work figure {
+  width: 100%;
+}
+
+.cbp-item figcaption .title {
+  font-size: 14px;
+  color: #000;
+}
+
+.cbp-item figcaption {
+  padding: 14px;
+}
+
+.cbp-item figcaption .info {
+  font-size: 13px;
+  color: #989898;
+  line-height: 18px;
+  display: block;
+}
+
+#filters-container .cbp-filter-item {
+  font-size: 14px;
+  color: #787878;
+  cursor: pointer;
+  float: left;
+  margin-right: 15px;
+}
+/* 
+.cbp-item:hover figure .icon {
+  opacity: 0.9;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  transform: translate(0, -25px);
+  -webkit-transform: translate(0, -25px);
+  -moz-transform: translate(0, -25px);
+} */
+
+.cbp-item figure .icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  display: table-cell;
+  vertical-align: middle;
+  top: 50%;
+  margin-top: -20px;
+  transition: all ease 0.3s;
+}
+
+.cbp-item figure .icon i {
+  color: #fff;
+  padding: 17px 0 16px;
+  min-width: 50px;
+  border-radius: 50px;
+  text-align: center;
+  transition: all ease 0.3s;
+  text-align: center;
+  background: rgba(3, 122, 249, 0.8);
+}
+
+.cbp-item figure .icon i:before {
+  font-size: 18px;
+}
