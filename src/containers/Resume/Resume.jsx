@@ -4,7 +4,6 @@ import { Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 import "./Resume.css";
 import { Content, Section, SectionTitle, A } from "components";
 import { data } from "utils";
-import ipu from "assets/images/ipu_logo.png";
 
 const renderTooltip = (text) => {
   return <Tooltip>{text}</Tooltip>;
