@@ -4,6 +4,8 @@ import gaia from "assets/images/gaia_logo.png";
 import ipu from "assets/images/ipu_logo.png";
 import ublock from "assets/images/smart_lock.jpg";
 
+const ZPULink = "http://zeronemicrosystems.com/"
+
 const data = {
   name: "Anant Kaushik",
   job: "Masters Student",
@@ -58,7 +60,7 @@ const data = {
       photoLink: {
         src: zup,
         alt: "Zerone Microsystems Private Limited",
-        link: "http://www.zup.cash",
+        link: ZPULink,
       },
       title: "Lead Developer",
       company: "Zerone Microsystems",
@@ -70,7 +72,7 @@ const data = {
       photoLink: {
         src: zup,
         alt: "Zerone Microsystems Private Limited",
-        link: "http://www.zup.cash",
+        link: ZPULink,
       },
       title: "Senior Developer",
       duration: "Jul - Oct 2018",
@@ -81,7 +83,7 @@ const data = {
       photoLink: {
         src: zup,
         alt: "Zerone Microsystems Private Limited",
-        link: "http://www.zup.cash",
+        link: ZPULink,
       },
       title: "Software Engineer",
       duration: "Jun - Jul 2017",
