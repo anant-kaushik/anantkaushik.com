@@ -68,8 +68,7 @@ const EduLi = ({
 );
 
 const Experience = () => (
-  <Section>
-    <SectionTitle title="Resume" />
+  <Section title="How I used my time">
     <Row className="no_margin">
       <ExpDetials
         title="Working History"
@@ -108,8 +107,8 @@ const PaperItem = ({ image, title, info, link }) => (
 );
 
 const Papers = ({ papers }) => (
-  <Section background="#fafafa">
-    <SectionTitle title="Publications" />
+  <Section title="Publications" background="#fafafa">
+    <SectionTitle />
     <Row className="no_margin papers-wrapper">
       {papers.map((paper, key) => (
         <PaperItem {...paper} key={key} />
