@@ -4,7 +4,17 @@ import gaia from "assets/images/gaia_logo.png";
 import ipu from "assets/images/ipu_logo.png";
 import ublock from "assets/images/smart_lock.jpg";
 
-const ZPULink = "http://zeronemicrosystems.com/"
+const ZPUPhotoLink = {
+  src: zup,
+  alt: "Zerone Microsystems Private Limited",
+  link: "http://zeronemicrosystems.com/",
+};
+
+const CMUPhotoLink = {
+  src: cmu,
+  alt: "Carnegie Mellon University",
+  link: "https://www.cmu.edu/",
+};
 
 const data = {
   name: "Anant Kaushik",
@@ -45,23 +55,23 @@ const data = {
 
   workexp: [
     {
-      photoLink: {
-        src: cmu,
-        alt: "Carnegie Mellon University",
-        link: "https://www.cmu.edu/",
-      },
+      photoLink: CMUPhotoLink,
+      title: "Graduate Research Assitant",
+      company: "Carnegie Mellon University",
+      duration: "Apr 2020 - Present",
+      summary:
+        "Engineering CMU's Alexa Prize Social bot to be faster and robust",
+    },
+    {
+      photoLink: CMUPhotoLink,
       title: "Graduate Teaching Assitant",
       company: "Carnegie Mellon University",
-      duration: "Jan 2020 - Present",
+      duration: "Jan 2020 - May 2020",
       summary:
         "Working with Babs Carryer in Entrepreneurship and Innovation in Technology (14815). Mentored students on their “Apprentice Project” and “My Startup” projects.",
     },
     {
-      photoLink: {
-        src: zup,
-        alt: "Zerone Microsystems Private Limited",
-        link: ZPULink,
-      },
+      photoLink: ZPUPhotoLink,
       title: "Lead Developer",
       company: "Zerone Microsystems",
       duration: "Nov 2018 - May 2019",
@@ -69,22 +79,14 @@ const data = {
         "Led the development of the initial version of ZUP payments. Created the swipe2.0 protcol for faster transfer of information within smartphone (Android and iOS).",
     },
     {
-      photoLink: {
-        src: zup,
-        alt: "Zerone Microsystems Private Limited",
-        link: ZPULink,
-      },
+      photoLink: ZPUPhotoLink,
       title: "Senior Developer",
       duration: "Jul - Oct 2018",
       summary:
         "Scaled the Visitor Management System and Guest management Systems for 50% shorter query time. Added analytics dashboard to judge the trends and frequency of guests. Showcased our offerings in Nepal",
     },
     {
-      photoLink: {
-        src: zup,
-        alt: "Zerone Microsystems Private Limited",
-        link: ZPULink,
-      },
+      photoLink: ZPUPhotoLink,
       title: "Software Engineer",
       duration: "Jun - Jul 2017",
       summary:
@@ -106,11 +108,7 @@ const data = {
 
   eduexp: [
     {
-      photoLink: {
-        src: cmu,
-        alt: "Carnegie Mellon University",
-        link: "https://www.cmu.edu/",
-      },
+      photoLink: CMUPhotoLink,
       university: "Carnegie Mellon University",
       level: "Masters",
       duration: "May 2019 - Present",
@@ -145,13 +143,12 @@ const data = {
   papers: [
     {
       title: "Ubiquitously controlled personalized smartlock",
-      info:
-        "2017 International Conference on I-SMAC",
+      info: "2017 International Conference on I-SMAC",
       image: {
         src: ublock,
         alt: "Smart lock",
       },
-      link: "https://ieeexplore.ieee.org/document/8058266"
+      link: "https://ieeexplore.ieee.org/document/8058266",
     },
   ],
 };
