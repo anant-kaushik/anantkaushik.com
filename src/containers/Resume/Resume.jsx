@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 
 import "./Resume.css";
-import { Content, Section, SectionTitle, A } from "components";
+import { Content, Section, A } from "components";
 import { data } from "utils";
 
 const renderTooltip = (text) => {
@@ -85,7 +85,7 @@ const Experience = () => (
 );
 
 const PaperItem = ({ image, title, info, link }) => (
-  <Col lg={4} md={6} xs={12}>
+  <Col xl={4} md={6}>
     <div className="cbp-item webdesign">
       <div className="cbp-item-wrapper">
         <A href={link}>
@@ -108,7 +108,6 @@ const PaperItem = ({ image, title, info, link }) => (
 
 const Papers = ({ papers }) => (
   <Section title="Publications" background="#fafafa">
-    <SectionTitle />
     <Row className="no_margin papers-wrapper">
       {papers.map((paper, key) => (
         <PaperItem {...paper} key={key} />
