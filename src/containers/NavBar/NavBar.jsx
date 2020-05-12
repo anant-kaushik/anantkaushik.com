@@ -32,8 +32,8 @@ const TabButton = ({ history, route }) => (
 
 const Tabs = ({ history, routes }) => (
   <ul className="tabs">
-    {routes.map((route) => (
-      <TabButton history={history} route={route} />
+    {routes.map((route, key) => (
+      <TabButton key={key} history={history} route={route} />
     ))}
   </ul>
 );

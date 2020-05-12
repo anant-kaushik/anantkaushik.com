@@ -17,7 +17,7 @@ const PhotoLink = ({ src, alt, link }) => (
     rel="noopener noreferrer"
   >
     <OverlayTrigger
-      placement="below"
+      placement="bottom"
       delay={{ show: 250, hide: 400 }}
       overlay={renderTooltip(alt)}
     >
@@ -33,8 +33,8 @@ const ExpDetials = ({ title, experiences, LiComponent }) => (
         <i className="fa fa-suitcase" aria-hidden="true"></i>
         <h2 className="timeline-title">{title}</h2>
       </li>
-      {experiences.map((exp) => (
-        <LiComponent {...exp} />
+      {experiences.map((exp, key) => (
+        <LiComponent {...exp} key={key} />
       ))}
     </ul>
   </Col>
@@ -85,25 +85,25 @@ const Experience = () => (
   </Section>
 );
 
-const PaperItem = ({ image, title, info, link}) => (
+const PaperItem = ({ image, title, info, link }) => (
   <Col lg={4} md={6} xs={12}>
-  <div class="cbp-item webdesign">
-    <div class="cbp-item-wrapper">
-      <A href={link} >
-        <figure>
-          <div class="icon">
-            <i class="fa fa-clone" aria-hidden="true"></i>
-          </div>
-          <img src={image.src} alt={image.alt} />
-          <figcaption>
-            <span class="title">{title}</span>
-            <br />
-            <span class="info">{info}</span>
-          </figcaption>
-        </figure>
-      </A>
+    <div className="cbp-item webdesign">
+      <div className="cbp-item-wrapper">
+        <A href={link}>
+          <figure>
+            <div className="icon">
+              <i className="fa fa-clone" aria-hidden="true"></i>
+            </div>
+            <img src={image.src} alt={image.alt} />
+            <figcaption>
+              <span className="title">{title}</span>
+              <br />
+              <span className="info">{info}</span>
+            </figcaption>
+          </figure>
+        </A>
+      </div>
     </div>
-  </div>
   </Col>
 );
 
@@ -111,8 +111,8 @@ const Papers = ({ papers }) => (
   <Section background="#fafafa">
     <SectionTitle title="Publications" />
     <Row className="no_margin papers-wrapper">
-      {papers.map((paper) => (
-        <PaperItem {...paper} />
+      {papers.map((paper, key) => (
+        <PaperItem {...paper} key={key} />
       ))}
     </Row>
   </Section>
