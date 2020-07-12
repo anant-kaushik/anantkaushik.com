@@ -7,12 +7,10 @@ import { data } from "utils";
 const AboutMe = ({ about }) => (
   <Section title="Hi! I am Anant">
     <Paragragh className="top_30">
-      I'm currently pursuing my{" "}
+      I'm currently pursuing my s
       <LinkRefer link="https://mse.isri.cmu.edu/applicants/mse-ap/index.html">
         Master of Software Engineering at Carnegie Mellon University
       </LinkRefer>
-      , and I'm looking for software development internships in challenging
-      projects for summer 2020.
       <br />
       <br />
       Before joining CMU, I was the Lead developer at Zerone Microsystems
@@ -22,17 +20,15 @@ const AboutMe = ({ about }) => (
       of several use - cases which included an
       <LinkRefer link="http://zpi.cash"> payment app</LinkRefer>,
       <LinkRefer link="http://conyct.com"> identity exchange app</LinkRefer>,
-      and
+      and{" "}
       <LinkRefer link="http://conyct.com/vms">
-        {" "}
         visitor management web and mobile application
       </LinkRefer>
       <br />
       <br />
       Through my Master's, I am trying to learn the fundamentals of software
-      engineering and what it truly means to create a scalable system and manage
-      the team and the life cycle of the product. My Courses include Managing
-      Software Development, Models of Software Engineering
+      engineering and what it truly means to create a scalable system, manage
+      team and life cycle of the product.
       <br />
       <br />
       Apart from this, I have a love for startups and creative innovations. My
