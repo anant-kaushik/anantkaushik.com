@@ -1,0 +1,24 @@
+.filter,
+.filter:hover {
+  font-size: 14px;
+  color: #787878;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  float: left;
+}
+
+.filter.active {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #ffb100 !important;
+  box-shadow: none !important;
+}
+
+.filter:hover,
+.filter:focus {
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+  box-shadow: none;
+}

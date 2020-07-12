@@ -1,4 +1,4 @@
-import { Home, Resume } from "containers";
+import { Home, Resume, Project } from "containers";
 
 const routes = [
   {
@@ -11,6 +11,11 @@ const routes = [
     path: "/resume",
     name: "RESUME",
     component: Resume,
+  },
+  {
+    path: "/projects",
+    name: "PROJECTS",
+    component: Project,
   },
 ];
 

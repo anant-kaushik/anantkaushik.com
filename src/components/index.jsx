@@ -7,6 +7,7 @@ import App from "./App/App.jsx";
 // Custom Buttons
 // #########
 import RoundButton from "./RoundButton/RoundButton.jsx";
+import Filters from "./Filters/Filters.jsx";
 
 // #########
 // Section atoms
@@ -38,10 +39,16 @@ import Footer from "./Footer/Footer.jsx";
 // #########
 import A from "./A/A.jsx";
 
+// #########
+// Project Components
+// #########
+import ProjectItem from "./ProjectItem/ProjectItem.jsx";
+
 export {
   App,
   //Custom Buttons
   RoundButton,
+  Filters,
   //Section atoms
   Content,
   Section,
@@ -57,4 +64,6 @@ export {
   Footer,
   // Links
   A,
+  // Project
+  ProjectItem,
 };

@@ -1,0 +1,82 @@
+.project-item {
+  padding: 14px !important;
+}
+
+.project-item-content {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+  -webkit-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+  -moz-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+}
+
+.project-item img {
+  width: 100%;
+}
+
+.project-description {
+  padding: 14px;
+}
+
+.project-description .title {
+  font-size: 15px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000;
+}
+
+.project-description .info {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #989898;
+  line-height: 18px;
+  display: block;
+}
+
+.project-description .meta {
+  margin-top: 5px;
+  vertical-align: middle;
+}
+
+.project-description .meta .links,
+.tags {
+  display: inline-block;
+}
+
+.project-description .meta .links i {
+  color: #000;
+}
+
+.project-description .tags i {
+  padding-top: 3px;
+  padding-right: 4px;
+  font-size: 20px;
+  vertical-align: bottom;
+}
+
+.project-description .tags i.devicon-amazonwebservices-plain-wordmark {
+  font-size: 50px;
+}
+
+.project-description .links i {
+  padding-right: 10px;
+  font-size: 22px;
+}
+
+.project-description .links i:hover {
+  transform: scale(1.2);
+  transition: all ease 0.2s;
+}
+
+.project-description .meta i {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}

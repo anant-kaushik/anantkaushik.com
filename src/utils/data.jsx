@@ -3,6 +3,15 @@ import zup from "assets/images/zup.png";
 import gaia from "assets/images/gaia_logo.png";
 import ipu from "assets/images/ipu_logo.png";
 import ublock from "assets/images/smart_lock.jpg";
+import alexa from "assets/images/projects/aws-alexa.png";
+import jhu from "assets/images/projects/jhu-workshop.jpg";
+import exploit from "assets/images/projects/exploits.jpg";
+import malloc from "assets/images/projects/malloc.png";
+import shell from "assets/images/projects/shell.png";
+import cache from "assets/images/projects/cache.jpg";
+import ssh from "assets/images/projects/vagrant.png";
+import docker from "assets/images/projects/docker.jpg";
+import anant from "assets/images/profile.jpg";
 
 const ZPUPhotoLink = {
   src: zup,
@@ -151,6 +160,133 @@ const data = {
       link: "https://ieeexplore.ieee.org/document/8058266",
     },
   ],
+
+  mywork: {
+    filters: ["Research", "Devops", "Labs", "FrontEnd"],
+    projects: [
+      {
+        image: {
+          src: alexa,
+          alt: "Alexa prize",
+        },
+        name: "Alexa Prize Competition",
+        info:
+          "Improved the CMU Alexa chatbot's performance using parallelism and threading",
+        group: ["research"],
+        tags: ["aws", "python"],
+      },
+      {
+        image: {
+          src: jhu,
+          alt: "JSALT 2020",
+        },
+        name: "Crowdsourced human conversation corpus | JSALT 2020",
+        info:
+          "Creating a service to collect user and chatbot conversation data.",
+        group: ["research"],
+        tags: ["aws", "python"],
+      },
+      {
+        image: {
+          src: exploit,
+          alt: "Security exploits",
+        },
+        name: "Exploits",
+        info:
+          "Exploiting security vulnerability via code-injection and return-oriented-programming attacks",
+        group: ["labs"],
+        tags: ["c"],
+      },
+      {
+        image: {
+          src: cache,
+          alt: "Cache",
+        },
+        name: "Cache simulation and optimization",
+        info:
+          "Simulated hardware cache hits and misses for a trace. Optimized matrix transpose function to reduce cache misses",
+        group: ["labs"],
+        tags: ["c"],
+      },
+      {
+        image: {
+          src: malloc,
+          alt: "Memory allocation",
+        },
+        name: "Dynamic Storage Allocator",
+        info:
+          "Created my own version of the malloc, free, realloc and calloc functions",
+        group: ["labs"],
+        tags: ["c"],
+      },
+      {
+        image: {
+          src: shell,
+          alt: "Linux shell",
+        },
+        name: "Linux shell",
+        info:
+          "Created my own version of linux shell that allows job control and I/O redirections",
+        group: ["labs"],
+        tags: ["c"],
+      },
+      {
+        image: {
+          src: docker,
+          alt: "docker",
+        },
+        name: "Kuberneted Petclinic",
+        info: "Run docker images of spring pet clinic on Kubernetes",
+        group: ["devops"],
+        links: {
+          github: "https://github.com/anant-kaushik/Petclinic-docker-vagrant",
+        },
+        tags: ["docker", "vagrant"],
+      },
+
+      {
+        image: {
+          src: docker,
+          alt: "docker",
+        },
+        name: "Docker Petclinic",
+        info: "Create and run docker images of spring pet clinic in a VMs",
+        group: ["devops"],
+        links: {
+          github: "https://github.com/anant-kaushik/Petclinic-docker-vagrant",
+        },
+        tags: ["docker", "vagrant"],
+      },
+      {
+        image: {
+          src: ssh,
+          alt: "SSH",
+        },
+        name: "SSH between two VM's",
+        info: "Introduction to virtual machines and vagrant",
+        group: ["devops"],
+        links: {
+          github: "https://github.com/anant-kaushik/Vagrant-and-ssh-vms",
+        },
+        tags: ["vagrant"],
+      },
+
+      {
+        image: {
+          src: anant,
+          alt: "Website",
+        },
+
+        name: "Resume Website",
+        info: "Creacted this website by converting HTML template to React",
+        group: ["frontend"],
+        links: {
+          github: "https://github.com/anant-kaushik/anantkaushik.com",
+        },
+        tags: ["react"],
+      },
+    ],
+  },
 };
 
 export default data;

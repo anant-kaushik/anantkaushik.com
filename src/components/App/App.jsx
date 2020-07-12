@@ -7,6 +7,7 @@ import { history } from "utils";
 import MainPage from "views/MainPage.jsx";
 import "assets/fonts/flaticon/flaticon.css";
 import "assets/fonts/font-awesome/css/font-awesome.min.css";
+import "assets/fonts/devicon/devicon.min.css";
 import "assets/css/reset.css";
 
 class App extends Component {
