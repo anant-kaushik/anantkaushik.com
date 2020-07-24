@@ -2,6 +2,8 @@ import cmu from "assets/images/cmu_dogo.jpg";
 import zup from "assets/images/zup.png";
 import gaia from "assets/images/gaia_logo.png";
 import ipu from "assets/images/ipu_logo.png";
+import ddl from "assets/images/ddl.png";
+import john from "assets/images/john.png";
 import ublock from "assets/images/smart_lock.jpg";
 import alexa from "assets/images/projects/aws-alexa.png";
 import jhu from "assets/images/projects/jhu-workshop.jpg";
@@ -63,6 +65,31 @@ const data = {
   },
 
   workexp: [
+    {
+      photoLink: {
+        src: ddl,
+        alt: "Digital Dream Labs",
+        link: "https://www.digitaldreamlabs.com/",
+      },
+      title: "SDE Intern",
+      company: "Digital Dream Labs",
+      duration: "May 2020 - Present",
+      summary:
+        "Developed an open source web interface to connect and update vector robot",
+    },
+    {
+      photoLink: {
+        src: john,
+        alt: "The Johns Hopkins University",
+        link:
+          "https://www.clsp.jhu.edu/chaval-chat-dialogue-modeling-and-evaluation/",
+      },
+      title: "Graduate Student Researcher",
+      company: "The Johns Hopkins University",
+      duration: "June 2020 - Present",
+      summary:
+        "2020 Seventh Frederick Jelinek Memorial Summer Workshop is the seventh in a series of six-week-long research workshops on Machine Learning for Speech Language and Computer Vision Technology.",
+    },
     {
       photoLink: CMUPhotoLink,
       title: "Graduate Research Assitant",
