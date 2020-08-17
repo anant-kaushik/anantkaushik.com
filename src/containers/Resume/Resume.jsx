@@ -94,11 +94,11 @@ const PaperItem = ({ image, title, info, link }) => (
               <i className="fa fa-clone" aria-hidden="true"></i>
             </div>
             <img src={image.src} alt={image.alt} />
-            <figcaption>
-              <span className="title">{title}</span>
-              <br />
-              <span className="info">{info}</span>
-            </figcaption>
+            <div className="figcaption">
+              <div className="title">{title}</div>
+
+              <div className="info">{info}</div>
+            </div>
           </figure>
         </A>
       </div>

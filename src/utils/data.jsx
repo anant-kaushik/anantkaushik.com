@@ -6,6 +6,7 @@ import ddl from "assets/images/ddl.png";
 import john from "assets/images/john.png";
 import ublock from "assets/images/smart_lock.jpg";
 import alexa from "assets/images/projects/aws-alexa.png";
+import tartan from "assets/images/tartan_social_bot.png";
 import jhu from "assets/images/projects/jhu-workshop.jpg";
 import exploit from "assets/images/projects/exploits.jpg";
 import malloc from "assets/images/projects/malloc.png";
@@ -67,18 +68,6 @@ const data = {
   workexp: [
     {
       photoLink: {
-        src: ddl,
-        alt: "Digital Dream Labs",
-        link: "https://www.digitaldreamlabs.com/",
-      },
-      title: "SDE Intern",
-      company: "Digital Dream Labs",
-      duration: "May 2020 - Present",
-      summary:
-        "Developed an open source web interface to connect and update vector robot",
-    },
-    {
-      photoLink: {
         src: john,
         alt: "The Johns Hopkins University",
         link:
@@ -96,7 +85,19 @@ const data = {
       company: "Carnegie Mellon University",
       duration: "Apr 2020 - Present",
       summary:
-        "Engineering CMU's Alexa Prize Social bot to be faster and robust",
+        "Improved in Tartan bot response time by introducing parallelism. Analysing user dialog intents using data programming",
+    },
+    {
+      photoLink: {
+        src: ddl,
+        alt: "Digital Dream Labs",
+        link: "https://www.digitaldreamlabs.com/",
+      },
+      title: "SDE Intern",
+      company: "Digital Dream Labs",
+      duration: "May 2020 - Aug 2020",
+      summary:
+        "Developed an open source web interface to connect and update vector robot",
     },
     {
       photoLink: CMUPhotoLink,
@@ -185,6 +186,18 @@ const data = {
         alt: "Smart lock",
       },
       link: "https://ieeexplore.ieee.org/document/8058266",
+    },
+
+    {
+      title:
+        "Tartan: A Two-Tiered Dialog Framework For Multi-Domain Social Chitchat",
+      info: "Socialbot Grand Challenge 3",
+      image: {
+        src: tartan,
+        alt: "Tartan Socialbot",
+      },
+      link:
+        "https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexaprize/assets/challenge3/proceedings/CMU-Tartan.pdf",
     },
   ],
 

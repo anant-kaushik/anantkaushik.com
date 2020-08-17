@@ -147,16 +147,18 @@ ul.timeline {
   width: 100%;
 }
 
-.cbp-item figcaption .title {
+.cbp-item .figcaption .title {
   font-size: 14px;
   color: #000;
+  margin-bottom: 8px;
 }
 
-.cbp-item figcaption {
+.cbp-item .figcaption {
   padding: 14px;
+  line-height: 18px;
 }
 
-.cbp-item figcaption .info {
+.cbp-item .figcaption .info {
   font-size: 13px;
   color: #989898;
   line-height: 18px;
