@@ -275,15 +275,85 @@ const data = {
           src: docker,
           alt: "docker",
         },
-        name: "Kuberneted Petclinic",
+        name: "Kubernetes and Logstash Petclinic",
+        info:
+          "Run docker images of spring pet clinic on Kubernetes and use Logstash to save the logs",
+        group: ["devops"],
+        links: {
+          github:
+            "https://github.com/anant-kaushik/Petclinic-Kubernetes-and-Logstash",
+        },
+        tags: ["docker", "vagrant", "kubernetes", "logstash"],
+      },
+      {
+        image: {
+          src: docker,
+          alt: "docker",
+        },
+        name: "Kubernetes Petclinic",
         info: "Run docker images of spring pet clinic on Kubernetes",
         group: ["devops"],
         links: {
-          github: "https://github.com/anant-kaushik/Petclinic-docker-vagrant",
+          github: "https://github.com/anant-kaushik/Petclinic-Kubernetes",
         },
-        tags: ["docker", "vagrant"],
+        tags: ["docker", "vagrant", "kubernetes"],
       },
-
+      {
+        image: {
+          src: docker,
+          alt: "docker",
+        },
+        name: "Nagios",
+        info: "Nagios to monitor running virtual machines",
+        group: ["devops"],
+        links: {
+          github: "https://github.com/anant-kaushik/vagrant-and-nagios",
+        },
+        tags: ["docker", "vagrant", "nagios"],
+      },
+      {
+        image: {
+          src: docker,
+          alt: "docker",
+        },
+        name: "Jenkins and Ansible Vault Petclinic",
+        info:
+          "Jenkins job to create pet clinic artifacts, deploy with ansible and use ansible valut to share ssh keys",
+        group: ["devops"],
+        links: {
+          github: "https://github.com/anant-kaushik/Petclinic-Ansible-Vault",
+        },
+        tags: ["docker", "vagrant", "jenkins", "ansible"],
+      },
+      {
+        image: {
+          src: docker,
+          alt: "docker",
+        },
+        name: "Jenkins and Ansible Petclinic",
+        info:
+          "Jenkins job to create pet clinic artifacts and deploy with ansible",
+        group: ["devops"],
+        links: {
+          github: "https://github.com/anant-kaushik/Petclinic-Jenkins-Ansible",
+        },
+        tags: ["docker", "vagrant", "jenkins", "ansible"],
+      },
+      {
+        image: {
+          src: docker,
+          alt: "docker",
+        },
+        name: "Jenkins and Sonarqube Petclinic",
+        info:
+          "Jenkins job to create pet clinic artifacts and static analysis with SonarCube",
+        group: ["devops"],
+        links: {
+          github:
+            "https://github.com/anant-kaushik/Petclinic-Jenkins-Sonarqube",
+        },
+        tags: ["docker", "vagrant", "jenkins", "sonarqube"],
+      },
       {
         image: {
           src: docker,

@@ -3,6 +3,11 @@ import { Col } from "react-bootstrap";
 
 import { A } from "components";
 import "./ProjectItem.css";
+import jenkins from "assets/images/icons/jenkins.svg";
+import ansible from "assets/images/icons/ansible.svg";
+import kubernetes from "assets/images/icons/kubernetes.svg";
+import sonarqube from "assets/images/icons/sonarqube.svg";
+import logstash from "assets/images/icons/logstash.svg";
 
 const createLinkDiv = (key, name, link) => {
   console.log(link);
@@ -51,6 +56,16 @@ const createTagDiv = (key, name) => {
     case "python":
       icon = "devicon-python-plain colored";
       break;
+    case "jenkins":
+      return <img class="link-icons" src={jenkins} alt="jenkins" />;
+    case "ansible":
+      return <img class="link-icons" src={ansible} alt="ansible" />;
+    case "kubernetes":
+      return <img class="link-icons" src={kubernetes} alt="kubernetes" />;
+    case "sonarqube":
+      return <img class="link-icons" src={sonarqube} alt="sonarqube" />;
+    case "logstash":
+      return <img class="link-icons" src={logstash} alt="logstash" />;
     default:
       //error case
       return <i className="fa fa-exclamation-circle" aria-hidden="true"></i>;

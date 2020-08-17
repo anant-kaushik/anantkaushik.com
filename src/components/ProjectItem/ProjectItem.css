@@ -65,6 +65,13 @@
   font-size: 50px;
 }
 
+.project-description .tags .link-icons {
+  height: 24px;
+  width: auto;
+  padding-top: 3px;
+  padding-right: 4px;
+}
+
 .project-description .links i {
   padding-right: 10px;
   font-size: 22px;
