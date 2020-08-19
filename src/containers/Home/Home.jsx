@@ -7,7 +7,7 @@ import { data } from "utils";
 const AboutMe = ({ about }) => (
   <Section title="Hi! I am Anant">
     <Paragragh className="top_30">
-      I am master's student at{" "}
+      I am Master's student at{" "}
       <LinkRefer link="https://cu.edu">Carnegie Mellon University</LinkRefer>{" "}
       persuing{" "}
       <LinkRefer link="mse.isri.cmu.edu/applicants/mse-ap/index.html">

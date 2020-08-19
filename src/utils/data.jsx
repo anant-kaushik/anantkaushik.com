@@ -14,7 +14,13 @@ import shell from "assets/images/projects/shell.png";
 import cache from "assets/images/projects/cache.jpg";
 import ssh from "assets/images/projects/vagrant.png";
 import docker from "assets/images/projects/docker.jpg";
-import anant from "assets/images/profile.jpg";
+import vector from "assets/images/projects/vector.jpg";
+import jenkins_ansible from "assets/images/projects/jenkins_ansible.png";
+import jenkins_sonar from "assets/images/projects/jenkins_sonar.png";
+import kube_log from "assets/images/projects/kube_log.png";
+import kube from "assets/images/projects/kube.jpg";
+import anant_web from "assets/images/projects/anant_web.png";
+import mscs from "assets/images/projects/mscs.png";
 
 const ZPUPhotoLink = {
   src: zup,
@@ -67,6 +73,15 @@ const data = {
 
   workexp: [
     {
+      photoLink: CMUPhotoLink,
+      title: "Graduate Teaching Assitant",
+      company: "Carnegie Mellon University",
+      duration: "August 2020 - Prenet",
+      summary:
+        "Assisting Babs Carryer in AI Innovation (11654), teaching basics of innovation and starting and building a new venture using AI.",
+    },
+
+    {
       photoLink: {
         src: john,
         alt: "The Johns Hopkins University",
@@ -105,7 +120,7 @@ const data = {
       company: "Carnegie Mellon University",
       duration: "Jan 2020 - May 2020",
       summary:
-        "Working with Babs Carryer in Entrepreneurship and Innovation in Technology (14815). Mentored students on their “Apprentice Project” and “My Startup” projects.",
+        "Assisted professor in Entrepreneurship and Innovation in Technology (14815) in Spring 2020. Mentored students on “Apprentice Project” and “Mock Startup” projects. Participated in Investors meeting at Blue Tree Allied angels.",
     },
     {
       photoLink: ZPUPhotoLink,
@@ -120,7 +135,7 @@ const data = {
       title: "Senior Developer",
       duration: "Jul - Oct 2018",
       summary:
-        "Scaled the Visitor Management System and Guest management Systems for 50% shorter query time. Added analytics dashboard to judge the trends and frequency of guests. Showcased our offerings in Nepal",
+        "Scaled the Visitor Management System and Guest Management Systems for 50% shorter query time over 10,000 enteries. Added analytics dashboard to judge the trends and frequency of guests. Showcased our offerings in Nepal",
     },
     {
       photoLink: ZPUPhotoLink,
@@ -202,7 +217,7 @@ const data = {
   ],
 
   mywork: {
-    filters: ["Research", "Devops", "Labs", "FrontEnd"],
+    filters: ["Research", "Opensource", "Devops", "Labs", "FrontEnd"],
     projects: [
       {
         image: {
@@ -225,6 +240,21 @@ const data = {
           "Creating a service to collect user and chatbot conversation data.",
         group: ["research"],
         tags: ["aws", "python"],
+      },
+      {
+        image: {
+          src: vector,
+          alt: "Vector",
+        },
+        name: "Vector Web Setup",
+        info:
+          "An open source tool to allow users of Vector to configure their robot without relying on the proprietary phone application",
+        group: ["opensource"],
+        links: {
+          github: "https://github.com/digital-dream-labs/vector-web-setup",
+        },
+
+        tags: ["node", "ble"],
       },
       {
         image: {
@@ -272,9 +302,9 @@ const data = {
       },
       {
         image: {
-          src: docker,
-          alt: "docker",
+          src: kube_log,
         },
+        alt: "Kube Log",
         name: "Kubernetes and Logstash Petclinic",
         info:
           "Run docker images of spring pet clinic on Kubernetes and use Logstash to save the logs",
@@ -287,8 +317,8 @@ const data = {
       },
       {
         image: {
-          src: docker,
-          alt: "docker",
+          src: kube,
+          alt: "Kubernetes",
         },
         name: "Kubernetes Petclinic",
         info: "Run docker images of spring pet clinic on Kubernetes",
@@ -313,8 +343,8 @@ const data = {
       },
       {
         image: {
-          src: docker,
-          alt: "docker",
+          src: jenkins_ansible,
+          alt: "Jenkins Ansible Vault",
         },
         name: "Jenkins and Ansible Vault Petclinic",
         info:
@@ -327,8 +357,8 @@ const data = {
       },
       {
         image: {
-          src: docker,
-          alt: "docker",
+          src: jenkins_ansible,
+          alt: "Jenkins Ansible",
         },
         name: "Jenkins and Ansible Petclinic",
         info:
@@ -341,8 +371,8 @@ const data = {
       },
       {
         image: {
-          src: docker,
-          alt: "docker",
+          src: jenkins_sonar,
+          alt: "Jenkins Sonar",
         },
         name: "Jenkins and Sonarqube Petclinic",
         info:
@@ -380,15 +410,28 @@ const data = {
         },
         tags: ["vagrant"],
       },
-
       {
         image: {
-          src: anant,
+          src: anant_web,
           alt: "Website",
         },
 
         name: "Resume Website",
         info: "Creacted this website by converting HTML template to React",
+        group: ["frontend"],
+        links: {
+          github: "https://github.com/anant-kaushik/anantkaushik.com",
+        },
+        tags: ["react"],
+      },
+      {
+        image: {
+          src: mscs,
+          alt: "Masters Committee Website",
+        },
+
+        name: "SCS Masters Committee Website",
+        info: "Creacted website for newly formed SCS Dean's Masters Committee",
         group: ["frontend"],
         links: {
           github: "https://github.com/anant-kaushik/anantkaushik.com",

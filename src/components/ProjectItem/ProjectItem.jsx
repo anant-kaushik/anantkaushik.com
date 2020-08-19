@@ -8,6 +8,8 @@ import ansible from "assets/images/icons/ansible.svg";
 import kubernetes from "assets/images/icons/kubernetes.svg";
 import sonarqube from "assets/images/icons/sonarqube.svg";
 import logstash from "assets/images/icons/logstash.svg";
+import node from "assets/images/icons/node.svg";
+import bluetooth from "assets/images/icons/bluetooth.svg";
 
 const createLinkDiv = (key, name, link) => {
   console.log(link);
@@ -66,6 +68,12 @@ const createTagDiv = (key, name) => {
       return <img class="link-icons" src={sonarqube} alt="sonarqube" />;
     case "logstash":
       return <img class="link-icons" src={logstash} alt="logstash" />;
+    case "node":
+      return <img class="link-icons" src={node} alt="logstash" />;
+    case "bluetooth":
+    case "ble":
+      return <img class="link-icons" src={bluetooth} alt="logstash" />;
+
     default:
       //error case
       return <i className="fa fa-exclamation-circle" aria-hidden="true"></i>;
