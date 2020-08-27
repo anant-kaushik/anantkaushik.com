@@ -19,6 +19,7 @@ import jenkins_ansible from "assets/images/projects/jenkins_ansible.png";
 import jenkins_sonar from "assets/images/projects/jenkins_sonar.png";
 import kube_log from "assets/images/projects/kube_log.png";
 import kube from "assets/images/projects/kube.jpg";
+import nagios from "assets/images/projects/nagios.png";
 import anant_web from "assets/images/projects/anant_web.png";
 import mscs from "assets/images/projects/mscs.png";
 
@@ -76,7 +77,7 @@ const data = {
       photoLink: CMUPhotoLink,
       title: "Graduate Teaching Assitant",
       company: "Carnegie Mellon University",
-      duration: "August 2020 - Prenet",
+      duration: "August 2020 - Present",
       summary:
         "Assisting Babs Carryer in AI Innovation (11654), teaching basics of innovation and starting and building a new venture using AI.",
     },
@@ -330,8 +331,8 @@ const data = {
       },
       {
         image: {
-          src: docker,
-          alt: "docker",
+          src: nagios,
+          alt: "nagios",
         },
         name: "Nagios",
         info: "Nagios to monitor running virtual machines",
@@ -434,7 +435,8 @@ const data = {
         info: "Creacted website for newly formed SCS Dean's Masters Committee",
         group: ["frontend"],
         links: {
-          github: "https://github.com/anant-kaushik/anantkaushik.com",
+          github:
+            "https://github.com/scs-master-deans-committee/scs-master-deans-committee.github.io",
         },
         tags: ["react"],
       },

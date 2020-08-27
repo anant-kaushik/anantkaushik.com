@@ -10,6 +10,7 @@ import sonarqube from "assets/images/icons/sonarqube.svg";
 import logstash from "assets/images/icons/logstash.svg";
 import node from "assets/images/icons/node.svg";
 import bluetooth from "assets/images/icons/bluetooth.svg";
+import nagios from "assets/images/icons/nagios.svg";
 
 const createLinkDiv = (key, name, link) => {
   console.log(link);
@@ -69,10 +70,12 @@ const createTagDiv = (key, name) => {
     case "logstash":
       return <img class="link-icons" src={logstash} alt="logstash" />;
     case "node":
-      return <img class="link-icons" src={node} alt="logstash" />;
+      return <img class="link-icons" src={node} alt="node" />;
     case "bluetooth":
     case "ble":
-      return <img class="link-icons" src={bluetooth} alt="logstash" />;
+      return <img class="link-icons" src={bluetooth} alt="ble" />;
+    case "nagios":
+      return <img class="link-icons" src={nagios} alt="nagios" />;
 
     default:
       //error case
