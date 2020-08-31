@@ -136,12 +136,12 @@ const data = {
       title: "Senior Developer",
       duration: "Jul - Oct 2018",
       summary:
-        "Scaled the Visitor Management System and Guest Management Systems for 50% shorter query time over 10,000 enteries. Added analytics dashboard to judge the trends and frequency of guests. Showcased our offerings in Nepal",
+        "Scaled the Visitor Management System and Guest Management Systems for 50% shorter query time over 10,000 entries. Added analytics dashboard to judge the trends and frequency of guests. Showcased our offerings in Nepal",
     },
     {
       photoLink: ZPUPhotoLink,
       title: "Software Engineer",
-      duration: "Jun - Jul 2017",
+      duration: "Jun 2017 - Jul 2018",
       summary:
         "Developed multiple prototypes from the base technology on Android Platform. Created Visitor Management and Guest Management web portals and mobile application. ",
     },
