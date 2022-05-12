@@ -7,18 +7,32 @@ import { data } from "utils";
 const AboutMe = ({ about }) => (
   <Section title="Hi! I am Anant">
     <Paragragh className="top_30">
-      I am Master's student at{" "}
-      <LinkRefer link="https://cu.edu">Carnegie Mellon University</LinkRefer>{" "}
-      persuing{" "}
-      <LinkRefer link="mse.isri.cmu.edu/applicants/mse-ap/index.html">
-        Software Engineering
+      Tech lead at Digital Dream Labs working on{" "}
+      <LinkRefer link="https://www.digitaldreamlabs.com/pages/meet-vector">
+        Vector 2.0
       </LinkRefer>
-      . Previously, I was the Lead developer at Zerone Microsystems Private
-      Limited, founded by the team of a former KPMG Partners. I worked on the
-      core technology and led the development of several use - cases which
-      included a<LinkRefer link="http://zpi.cash"> payment app</LinkRefer>,
-      <LinkRefer link="http://conyct.com"> identity exchange app</LinkRefer>,
-      and{" "}
+      . I did my master's from{" "}
+      <LinkRefer link="https://cmu.edu">Carnegie Mellon University</LinkRefer>{" "}
+      in{" "}
+      <LinkRefer link="https://mse.isri.cmu.edu/index.html">
+        Software Engineering - Scalable Systems
+      </LinkRefer>
+      .
+      <br />
+      <br />
+      Previously, I was the Lead developer at Zerone Microsystems Private
+      Limited, commonly know as{" "}
+      <LinkRefer link="https://cardse.co/">CardSe</LinkRefer>. There I worked on
+      the core swipe and pay technology and{" "}
+      <LinkRefer link="https://cardse.co/">
+        prototyping the payment app
+      </LinkRefer>
+      . I also worked on the development of mutiple usecases for our swipe tech
+      such as{" "}
+      <LinkRefer link="https://play.google.com/store/apps/details?id=com.zeronecorp.android.apps.conyctapp&hl=en_US&gl=US">
+        identity exchange app
+      </LinkRefer>
+      , and{" "}
       <LinkRefer link="http://conyct.com/vms">
         visitor management web and mobile application
       </LinkRefer>
