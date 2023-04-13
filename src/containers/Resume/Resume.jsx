@@ -71,7 +71,7 @@ const Experience = () => (
   <Section title="How I used my time">
     <Row className="no_margin">
       <ExpDetials
-        title="Working History"
+        title="Work History"
         experiences={data.workexp}
         LiComponent={ExpLi}
       />

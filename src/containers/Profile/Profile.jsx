@@ -33,11 +33,6 @@ const ProfileInformation = ({ name, dob, job, email, skype }) => (
     </li>
     <li>
       <p>
-        <span>Birthday:</span> {dob}
-      </p>
-    </li>
-    <li>
-      <p>
         <span>Job:</span> {job}
       </p>
     </li>

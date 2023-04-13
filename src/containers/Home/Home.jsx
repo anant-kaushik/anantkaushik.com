@@ -7,7 +7,10 @@ import { data } from "utils";
 const AboutMe = ({ about }) => (
   <Section title="Hi! I am Anant">
     <Paragragh className="top_30">
-      Tech lead at Digital Dream Labs working on{" "}
+      SDE at Amazon.
+      <br />
+      <br />
+      Previously, I was Software Team lead at Digital Dream Labs working on{" "}
       <LinkRefer link="https://www.digitaldreamlabs.com/pages/meet-vector">
         Vector 2.0
       </LinkRefer>
@@ -17,13 +20,9 @@ const AboutMe = ({ about }) => (
       <LinkRefer link="https://mse.isri.cmu.edu/index.html">
         Software Engineering - Scalable Systems
       </LinkRefer>
-      .
-      <br />
-      <br />
-      Previously, I was the Lead developer at Zerone Microsystems Private
-      Limited, commonly know as{" "}
-      <LinkRefer link="https://cardse.co/">CardSe</LinkRefer>. There I worked on
-      the core swipe and pay technology and{" "}
+      . Earlier I was Lead developer at Zerone Microsystems Private Limited,
+      commonly know as <LinkRefer link="https://cardse.co/">CardSe</LinkRefer>.
+      There I worked on the core swipe and pay technology and{" "}
       <LinkRefer link="https://cardse.co/">
         prototyping the payment app
       </LinkRefer>

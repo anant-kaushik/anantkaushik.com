@@ -14,7 +14,7 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "deploy": "AWS_PROFILE=main aws s3 sync build/ s3://www.anantkaushik.com",
     "test": "react-scripts test",
