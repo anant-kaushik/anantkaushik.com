@@ -3,14 +3,14 @@ import { Col } from "react-bootstrap";
 
 import { A } from "components";
 import "./ProjectItem.css";
-import jenkins from "assets/images/icons/jenkins.svg";
-import ansible from "assets/images/icons/ansible.svg";
-import kubernetes from "assets/images/icons/kubernetes.svg";
-import sonarqube from "assets/images/icons/sonarqube.svg";
-import logstash from "assets/images/icons/logstash.svg";
-import node from "assets/images/icons/node.svg";
-import bluetooth from "assets/images/icons/bluetooth.svg";
-import nagios from "assets/images/icons/nagios.svg";
+// import jenkins from "assets/images/icons/jenkins.svg";
+// import ansible from "assets/images/icons/ansible.svg";
+// import kubernetes from "assets/images/icons/kubernetes.svg";
+// import sonarqube from "assets/images/icons/sonarqube.svg";
+// import logstash from "assets/images/icons/logstash.svg";
+// import node from "assets/images/icons/node.svg";
+// import bluetooth from "assets/images/icons/bluetooth.svg";
+// import nagios from "assets/images/icons/nagios.svg";
 
 const createLinkDiv = (key, name, link) => {
   console.log(link);
@@ -60,22 +60,23 @@ const createTagDiv = (key, name) => {
       icon = "devicon-python-plain colored";
       break;
     case "jenkins":
-      return <img class="link-icons" src={jenkins} alt="jenkins" />;
+    // return <img class="link-icons" src={jenkins} alt="jenkins" />;
     case "ansible":
-      return <img class="link-icons" src={ansible} alt="ansible" />;
+    // return <img class="link-icons" src={ansible} alt="ansible" />;
     case "kubernetes":
-      return <img class="link-icons" src={kubernetes} alt="kubernetes" />;
+    // return <img class="link-icons" src={kubernetes} alt="kubernetes" />;
     case "sonarqube":
-      return <img class="link-icons" src={sonarqube} alt="sonarqube" />;
+    // return <img class="link-icons" src={sonarqube} alt="sonarqube" />;
     case "logstash":
-      return <img class="link-icons" src={logstash} alt="logstash" />;
+    // return <img class="link-icons" src={logstash} alt="logstash" />;
     case "node":
-      return <img class="link-icons" src={node} alt="node" />;
+    // return <img class="link-icons" src={node} alt="node" />;
     case "bluetooth":
     case "ble":
-      return <img class="link-icons" src={bluetooth} alt="ble" />;
+    // return <img class="link-icons" src={bluetooth} alt="ble" />;
     case "nagios":
-      return <img class="link-icons" src={nagios} alt="nagios" />;
+      // return <img class="link-icons" src={nagios} alt="nagios" />;
+      return <></>;
 
     default:
       //error case
