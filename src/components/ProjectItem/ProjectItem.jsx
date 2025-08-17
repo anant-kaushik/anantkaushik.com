@@ -60,20 +60,27 @@ const createTagDiv = (key, name) => {
       icon = "devicon-python-plain colored";
       break;
     case "jenkins":
-    // return <img class="link-icons" src={jenkins} alt="jenkins" />;
+      // return <img class="link-icons" src={jenkins} alt="jenkins" />;
+      break;
     case "ansible":
-    // return <img class="link-icons" src={ansible} alt="ansible" />;
+      // return <img class="link-icons" src={ansible} alt="ansible" />;
+      break;
     case "kubernetes":
-    // return <img class="link-icons" src={kubernetes} alt="kubernetes" />;
+      // return <img class="link-icons" src={kubernetes} alt="kubernetes" />;
+      break;
     case "sonarqube":
-    // return <img class="link-icons" src={sonarqube} alt="sonarqube" />;
+      // return <img class="link-icons" src={sonarqube} alt="sonarqube" />;
+      break;
     case "logstash":
-    // return <img class="link-icons" src={logstash} alt="logstash" />;
+      // return <img class="link-icons" src={logstash} alt="logstash" />;
+      break;
     case "node":
-    // return <img class="link-icons" src={node} alt="node" />;
+      // return <img class="link-icons" src={node} alt="node" />;
+      break;
     case "bluetooth":
     case "ble":
-    // return <img class="link-icons" src={bluetooth} alt="ble" />;
+      // return <img class="link-icons" src={bluetooth} alt="ble" />;
+      break;
     case "nagios":
       // return <img class="link-icons" src={nagios} alt="nagios" />;
       return <></>;
