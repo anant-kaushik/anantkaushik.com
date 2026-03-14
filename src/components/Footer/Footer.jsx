@@ -12,7 +12,7 @@ const Footer = () => (
             Anant Kaushik.
           </Col>
           <Col xl="8" md="12" className="copyright">
-            © 2020 Converted to react by me created by{" "}
+            © 2026 Converted to react by me created by{" "}
             <A
               href="https://themeforest.net/user/tavonline"
               target="_blank"

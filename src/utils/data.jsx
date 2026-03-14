@@ -53,7 +53,6 @@ const data = {
   job: "Software Engineer",
   dob: "01 August 1996",
   email: "anantk@alumni.cmu.edu",
-  skype: "live:anantkaushik.me",
 
   skills: {
     top: [
@@ -85,10 +84,19 @@ const data = {
   workexp: [
     {
       photoLink: AmazonPhotoLink,
+      title: "Software Engineer II",
+      company: "Amazon",
+      duration: "Apr 2025 - Present",
+      summary:
+        "Leading development of Amazon Customer Service’s main landing experiences and messaging flows, improving how customers discover help options and transition smoothly from self-service to live agents.",
+    },
+    {
+      photoLink: AmazonPhotoLink,
       title: "Software Engineer",
       company: "Amazon",
-      duration: "Oct 2022 - present",
-      summary: "",
+      duration: "Oct 2022 - Mar 2025",
+      summary:
+        "Implemented and iterated on customer service UI and messaging experiences that guide customers from their initial questions, through troubleshooting, and into conversations with the most relevant support agents.",
     },
     {
       photoLink: DDLPhotoLink,
@@ -279,6 +287,19 @@ const data = {
         },
 
         tags: ["node", "ble"],
+      },
+      {
+        image: {
+          src: vector,
+          alt: "AirSign hand and gesture recognition",
+        },
+        name: "AirSign – Webcam Hand & Gesture Recognition",
+        info: "Proof-of-concept for real-time hand detection and gesture recognition from a webcam, designed for air signatures.",
+        group: ["opensource"],
+        links: {
+          github: "https://github.com/anant-kaushik/airsign",
+        },
+        tags: ["python"],
       },
       {
         image: {

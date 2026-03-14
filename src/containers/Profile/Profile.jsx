@@ -41,11 +41,6 @@ const ProfileInformation = ({ name, dob, job, email, skype }) => (
         <span>Email:</span> {email}
       </p>
     </li>
-    <li>
-      <p>
-        <span>Skype:</span> {skype}
-      </p>
-    </li>
   </ul>
 );
 
