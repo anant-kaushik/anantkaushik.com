@@ -13,8 +13,8 @@ Live at: [www.anantkaushik.com](https://www.anantkaushik.com)
 | UI Framework | React 18, React Bootstrap 2, Bootstrap 4 |
 | Routing | React Router DOM 5 |
 | Project Filtering | ShuffleJS 5 |
-| Language | JavaScript (JSX), TypeScript 3 |
-| Build Tool | Create React App (react-scripts 5) |
+| Language | JavaScript (JSX) |
+| Build Tool | Vite 6 |
 | Deployment | AWS S3 (via AWS CLI) |
 
 ---
@@ -57,7 +57,7 @@ npm install
 npm start
 ```
 
-Opens at `http://localhost:3000` with hot reload.
+Opens at `http://localhost:5173` with hot module replacement.
 
 **Production build**
 
@@ -65,7 +65,13 @@ Opens at `http://localhost:3000` with hot reload.
 npm run build
 ```
 
-Outputs optimized static files to `/build`.
+Outputs optimized static files to `/dist`.
+
+**Preview production build locally**
+
+```bash
+npm run preview
+```
 
 **Deploy to S3**
 
@@ -73,7 +79,7 @@ Outputs optimized static files to `/build`.
 npm run deploy
 ```
 
-Syncs the `/build` directory to the S3 bucket `www.anantkaushik.com` using the AWS CLI.
+Builds and syncs `/dist` to the S3 bucket `www.anantkaushik.com` using the AWS CLI.
 
 ---
 
@@ -92,6 +98,6 @@ Syncs the `/build` directory to the S3 bucket `www.anantkaushik.com` using the A
 | File | Purpose |
 |---|---|
 | `src/utils/data.jsx` | Content data (edit this to update site content) |
-| `jsconfig.json` | `baseUrl: src/` for import path aliasing |
-| `.env` | `NODE_PATH=./src` for module resolution |
-| `public/index.html` | SEO meta tags, canonical URL, Open Graph tags |
+| `vite.config.js` | Vite config: React plugin and `src/` path aliases |
+| `index.html` | App entry point, SEO meta tags, canonical URL |
+| `jsconfig.json` | `baseUrl: src/` for IDE path resolution |
