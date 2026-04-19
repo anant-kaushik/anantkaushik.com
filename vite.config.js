@@ -8,12 +8,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      components: r('./src/components'),
-      containers: r('./src/containers'),
-      utils: r('./src/utils'),
-      views: r('./src/views'),
-      routes: r('./src/routes'),
+      '@': r('./src'),
+      features: r('./src/features'),
+      data: r('./src/data'),
       assets: r('./src/assets'),
+      lib: r('./src/lib'),
     },
+  },
+  build: {
+    chunkSizeWarningLimit: 1200,
   },
 })
