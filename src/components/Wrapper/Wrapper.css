@@ -1,9 +1,0 @@
-.wrapper {
-    margin-top: 60px;
-}
-
-@media (max-width: 768px) {
-    .wrapper {
-      margin-top: 30px !important;
-    }
-}
