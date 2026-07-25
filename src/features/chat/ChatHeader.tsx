@@ -18,7 +18,7 @@ export default function ChatHeader() {
         <div className="min-w-0">
           <p className="text-sm font-semibold text-[#fafafa] truncate">{data.name}</p>
           <p className="text-xs text-[#71717a] truncate">
-            {data.workexp[0].title} · {data.workexp[0].company}
+            {data.headline}
           </p>
         </div>
       </div>

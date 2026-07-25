@@ -4,6 +4,7 @@ import vectorImg from "assets/images/projects/vector.jpg";
 import exploitImg from "assets/images/projects/exploits.jpg";
 import kubeImg from "assets/images/projects/kube.jpg";
 import airImg from "assets/images/projects/vector.jpg"; // closest available
+import amazonImg from "assets/images/amazon.png";
 
 const defaultResponses = [
   "Great question! Try asking about my experience, education, skills, or projects.",
@@ -14,6 +15,34 @@ let defaultIdx = 0;
 const nextDefault = () => defaultResponses[defaultIdx++ % defaultResponses.length];
 
 export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
+  "agentic-cs": {
+    name: "Agentic CS Platform",
+    description:
+      "Partnered with a Principal Engineer to prototype a streaming agentic customer service experience — end-to-end streaming of agent requests and responses — demoed to the Amazon Stores CEO and recognized with the Amazon One CS Award. Architected a reusable UI framework pairing workflow responses with interactive widgets for in-app issue resolution, driving adoption across multiple CS orgs.",
+    image: amazonImg,
+    tags: ["React", "Agentic AI", "Streaming", "Jotai"],
+    badge: { label: "Amazon", color: "#fbbf24", bg: "#2e2410" },
+    stats: [
+      { value: "$150M+", label: "Annual Savings" },
+      { value: "1", label: "CEO Demo" },
+      { value: "80%", label: "Faster Dev Cycle" },
+    ],
+    links: {},
+  },
+  "message-us": {
+    name: "Message Us — CS Platform",
+    description:
+      "Launched Message Us, Amazon Stores' primary automated customer service platform, in 4 new international marketplaces. Rebuilt the Customer Service Home Page — the highest-traffic customer-facing surface in CS Home — and drove accessibility compliance to meet EU Accessibility Act (EAA) requirements.",
+    image: amazonImg,
+    tags: ["React", "Jotai", "Accessibility", "A11y"],
+    badge: { label: "Amazon", color: "#38bdf8", bg: "#1a2535" },
+    stats: [
+      { value: "300M+", label: "Shoppers Reached" },
+      { value: "64K+", label: "Contacts Deflected" },
+      { value: "4", label: "New Marketplaces" },
+    ],
+    links: {},
+  },
   "alexa-prize": {
     name: "Alexa Prize Competition",
     description:
@@ -107,6 +136,95 @@ const makeMainResponse = (msg: string): BotResponse => {
   return { type: "text", content: nextDefault() };
 };
 
+type FaqRule = { re: RegExp; reply: string };
+
+// Per-project canned answers, keyed by topic. Matched in order — first regex hit wins.
+const PROJECT_FAQ: Record<string, FaqRule[]> = {
+  "agentic-cs": [
+    {
+      re: /\b(impact|result|outcome|save|savings|award|ceo)\b/,
+      reply:
+        "The streaming agentic prototype was demoed live to the Amazon Stores CEO and earned an Amazon One CS Award. Separately, the reusable UI framework I architected — pairing workflow responses with interactive widgets for in-app resolution — was adopted across multiple customer service orgs and contributed $150M+ in annualized cost savings. I also built AI-powered internal tooling that cut our team's average development cycle time by 80%.",
+    },
+    {
+      re: /\b(how|architecture|design|widget|framework|stream)\b/,
+      reply:
+        "It streams agent requests and responses end-to-end, and pairs each workflow response with an interactive widget so customers can resolve issues in-app rather than bouncing to another surface. That widget framework was built to be reusable, which is how it spread across multiple CS orgs.",
+    },
+  ],
+  "message-us": [
+    {
+      re: /\b(impact|result|outcome|reach|deflect|contact)\b/,
+      reply:
+        "I launched Message Us, Amazon Stores' primary automated customer service platform, in 4 new international marketplaces reaching 300M+ shoppers, and built self-service tools that deflected 64K+ unique contacts from support associates.",
+    },
+    {
+      re: /\b(how|accessib|eaa|home page|rebuilt)\b/,
+      reply:
+        "I rebuilt the Customer Service Home Page — the highest-traffic customer-facing surface in CS Home — authoring our React/Jotai guidelines along the way, and drove the accessibility work needed to meet EU Accessibility Act (EAA) requirements.",
+    },
+  ],
+  "alexa-prize": [
+    {
+      re: /\b(how|contribution|thread|parallel|snorkel|label)\b/,
+      reply:
+        "My key contributions:\n\n• Introduced Python threading to parallelize dialog processing steps — cutting response latency by ~40%\n• Used Snorkel data programming to programmatically label thousands of user utterances without manual annotation\n• Integrated the concurrent pipeline into the live CMU socialbot used in Alexa's Socialbot Grand Challenge 3",
+    },
+    {
+      re: /\b(result|impact|rank|place|competition)\b/,
+      reply: "The CMU socialbot placed in the top 3 of Alexa's Socialbot Grand Challenge 3 (SGC3).",
+    },
+  ],
+  "vector-web-setup": [
+    {
+      re: /\b(why|motivation|deprecat|reason)\b/,
+      reply:
+        "Vector robots require a phone app for initial setup, but the official app was being deprecated. As part of my internship at Digital Dream Labs, I built this open source browser tool using Web Bluetooth (BLE) so users could configure their robots without relying on the proprietary app — keeping thousands of robots functional for the community.",
+    },
+    {
+      re: /\b(how|bluetooth|ble|browser|work)\b/,
+      reply:
+        "It uses the Web Bluetooth API to talk directly to the robot from the browser, replicating the pairing and Wi-Fi provisioning flow that used to live in the deprecated phone app — no native install required.",
+    },
+  ],
+  airsign: [
+    {
+      re: /\b(how|pipeline|detect|landmark|mediapipe|track)\b/,
+      reply:
+        "AirSign uses MediaPipe Hands to detect 21 hand landmarks in real-time from a webcam. The landmark positions are analyzed each frame to recognize gesture patterns. For air signatures, it tracks the trajectory of the index fingertip across frames and reconstructs the path as a signature stroke — all running locally at ~30fps with no server calls.",
+    },
+    {
+      re: /\b(why|privacy|hardware|special)\b/,
+      reply:
+        "No specialized hardware or server round-trips needed — everything runs locally from a standard webcam feed, which keeps it fast and privacy-friendly.",
+    },
+  ],
+  kubernetes: [
+    {
+      re: /\b(how|pipeline|deploy|jenkins|ansible|logstash|docker)\b/,
+      reply:
+        "Full pipeline: code commits trigger Jenkins jobs that build Spring PetClinic artifacts → Docker images are created → Ansible deploys to Vagrant VMs → Kubernetes orchestrates the containers. Logstash forwards application logs to Elasticsearch for aggregation. Ansible Vault encrypts SSH keys for secure, fully automated deployments.",
+    },
+    {
+      re: /\b(why|learn|progress|series)\b/,
+      reply:
+        "It's a progressively advanced series — each project layered on another piece of the DevOps stack, from a single Docker container up to full Kubernetes orchestration with CI/CD and config management.",
+    },
+  ],
+  security: [
+    {
+      re: /\b(learn|takeaway|rop|exploit|attack)\b/,
+      reply:
+        "These CMU 15-213 projects gave me deep understanding of how computers work at the lowest level — stack memory layout, calling conventions, how compilers emit code, and critically how attackers exploit these mechanisms. Understanding how to break systems makes you a significantly better defensive engineer.",
+    },
+    {
+      re: /\b(malloc|memory|alloc|shell)\b/,
+      reply:
+        "The malloc lab gave me strong intuition for memory allocator design trade-offs between utilization and throughput, and the shell lab covered job control, signals, and process management in a Unix shell built from scratch.",
+    },
+  ],
+};
+
 const makeProjectResponse = (id: string) => (msg: string): BotResponse => {
   const q = msg.toLowerCase();
   if (/\b(link|github|code|repo|source)\b/.test(q)) {
@@ -117,6 +235,10 @@ const makeProjectResponse = (id: string) => (msg: string): BotResponse => {
       type: "text",
       content: "This project's source isn't public, but I'm happy to discuss any implementation details!",
     };
+  }
+  const faqs = PROJECT_FAQ[id] ?? [];
+  for (const { re, reply } of faqs) {
+    if (re.test(q)) return { type: "text", content: reply };
   }
   if (/\b(tech|stack|tool|language|framework|used|built)\b/.test(q))
     return {
@@ -141,6 +263,48 @@ export const CONVERSATIONS: Conversation[] = [
       { id: "m4", role: "bot", type: "experience" },
     ],
     getBotResponse: makeMainResponse,
+  },
+  {
+    id: "agentic-cs",
+    title: "Agentic CS Platform",
+    preview: "How did you prototype the agentic AI experience?",
+    icon: "Bot",
+    iconBg: "#2e2410",
+    iconColor: "#fbbf24",
+    initialMessages: [
+      { id: "ac1", role: "user", type: "text", content: "Tell me about the agentic CS platform you built at Amazon" },
+      { id: "ac2", role: "bot", type: "project", projectId: "agentic-cs" },
+      { id: "ac3", role: "user", type: "text", content: "What was the impact?" },
+      {
+        id: "ac4",
+        role: "bot",
+        type: "text",
+        content:
+          "The streaming agentic prototype was demoed live to the Amazon Stores CEO and earned an Amazon One CS Award. Separately, the reusable UI framework I architected — pairing workflow responses with interactive widgets for in-app resolution — was adopted across multiple customer service orgs and contributed $150M+ in annualized cost savings. I also built AI-powered internal tooling that cut our team's average development cycle time by 80%.",
+      },
+    ],
+    getBotResponse: makeProjectResponse("agentic-cs"),
+  },
+  {
+    id: "message-us",
+    title: "Message Us Platform",
+    preview: "Tell me about launching Message Us",
+    icon: "MessageSquare",
+    iconBg: "#1a2535",
+    iconColor: "#38bdf8",
+    initialMessages: [
+      { id: "mu1", role: "user", type: "text", content: "Tell me about the Message Us platform" },
+      { id: "mu2", role: "bot", type: "project", projectId: "message-us" },
+      { id: "mu3", role: "user", type: "text", content: "What did you personally build?" },
+      {
+        id: "mu4",
+        role: "bot",
+        type: "text",
+        content:
+          "I launched Message Us, Amazon Stores' primary automated customer service platform, in 4 new international marketplaces, and built self-service tools that deflected 64K+ unique contacts from support associates. I also rebuilt the Customer Service Home Page — the highest-traffic customer-facing surface in CS Home — authoring our React/Jotai guidelines, and drove accessibility work to meet the EU Accessibility Act (EAA) requirements.",
+      },
+    ],
+    getBotResponse: makeProjectResponse("message-us"),
   },
   {
     id: "alexa-prize",

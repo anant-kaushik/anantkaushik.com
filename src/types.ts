@@ -46,6 +46,8 @@ export interface Project {
 export interface SiteData {
   name: string;
   job: string;
+  headline: string;
+  bio: string;
   dob: string;
   email: string;
   skills: { top: Skill[]; bottom: Skill[] };

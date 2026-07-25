@@ -52,6 +52,8 @@ const AmazonPhotoLink = {
 const data: SiteData = {
   name: "Anant Kaushik",
   job: "Software Engineer",
+  headline: "Software Engineer building AI-powered CX at Amazon",
+  bio: "Software Engineer with a Master's in Software Engineering from Carnegie Mellon. I build scalable, customer-facing systems at Amazon, with a research background in AI/NLP and a passion for open source robotics.",
   dob: "01 August 1996",
   email: "anantk@alumni.cmu.edu",
 
@@ -85,19 +87,19 @@ const data: SiteData = {
   workexp: [
     {
       photoLink: AmazonPhotoLink,
-      title: "Software Engineer II",
+      title: "Software Development Engineer II",
       company: "Amazon",
       duration: "Apr 2025 - Present",
       summary:
-        "Leading development of Amazon Customer Service’s main landing experiences and messaging flows, improving how customers discover help options and transition smoothly from self-service to live agents.",
+        "Partnered with a Principal Engineer to prototype a streaming agentic customer service experience, demoed to the Amazon Stores CEO and recognized with the Amazon One CS Award. Architected a reusable UI framework pairing workflow responses with interactive widgets for in-app issue resolution, driving adoption across multiple CS orgs and $150M+ in annualized cost savings. Built AI-powered internal tooling that cut average development cycle time by 80%, and agentic overnight code-review jobs that flagged 500+ code-quality issues across the team's services.",
     },
     {
       photoLink: AmazonPhotoLink,
-      title: "Software Engineer",
+      title: "Software Development Engineer I",
       company: "Amazon",
       duration: "Oct 2022 - Mar 2025",
       summary:
-        "Implemented and iterated on customer service UI and messaging experiences that guide customers from their initial questions, through troubleshooting, and into conversations with the most relevant support agents.",
+        "Launched Message Us, Amazon Stores' primary automated customer service platform, in 4 new international marketplaces. Built customer-facing self-service tools that deflected 64K+ unique contacts from customer service associates. Rebuilt the Customer Service Home Page — the highest-traffic customer-facing surface in CS Home — authoring React/Jotai guidelines and onboarding incoming SDEs. Drove accessibility compliance across the surface to meet EU Accessibility Act (EAA) requirements.",
     },
     {
       photoLink: DDLPhotoLink,
@@ -105,15 +107,15 @@ const data: SiteData = {
       company: "Digital Dream Labs",
       duration: "Oct 2021 - Sep 2022",
       summary:
-        "Spearheading development of Vector Robot Software. This comprises updating and maintaining legacy code for Xamarin application, Robot firmware, and SDK, to restart the production line.",
+        "Led the cross-functional relaunch of a consumer robot, coordinating changes across mobile app, firmware, and SDK codebases to clear a large preorder backlog and ship to customers on schedule.",
     },
     {
       photoLink: DDLPhotoLink,
-      title: "Senior Software Engineer",
+      title: "Senior Software Developer",
       company: "Digital Dream Labs",
       duration: "Feb 2021 - Sep 2021",
       summary:
-        "Developed a Mood based random sentence generator for Butter Robot and an automated Jenkins continuous delivery pipeline",
+        "Built a Jenkins continuous delivery pipeline automating test, package, and deploy across multiple services, eliminating manual release toil. Open-sourced an npm package (vector-web-setup) adopted by the Vector maker community to save, sign, and distribute custom firmware OTAs.",
     },
 
     {
@@ -166,7 +168,7 @@ const data: SiteData = {
       company: "Zerone Microsystems",
       duration: "Nov 2018 - May 2019",
       summary:
-        "Led the development of the initial version of ZUP payments. Created the swipe2.0 protcol for faster transfer of information within smartphone (Android and iOS).",
+        "Designed and shipped a BLE Swipe protocol enabling cross-platform iOS↔Android data exchange via a physical swipe gesture, a hardware-free alternative to NFC and 30% faster than the prior version. Led development of the first version of ZeronePay (formerly CardSe), turning a phone into a payment terminal or tap-to-pay card.",
     },
     {
       photoLink: ZPUPhotoLink,

@@ -3,7 +3,7 @@ import profile from "assets/images/profile.jpg";
 import data from "data/data";
 
 export default function AboutCard() {
-  const { name, job, email, workexp, links } = data;
+  const { name, bio, email, workexp, links } = data;
   const current = workexp[0];
 
   return (
@@ -23,11 +23,7 @@ export default function AboutCard() {
       </div>
 
       {/* Bio */}
-      <p className="text-xs text-[#a1a1aa] leading-relaxed mb-3">
-        Software engineer with a Masters from CMU in Software Engineering. I build scalable
-        customer-facing experiences at Amazon, have a background in AI/NLP research, and love
-        open source robotics.
-      </p>
+      <p className="text-xs text-[#a1a1aa] leading-relaxed mb-3">{bio}</p>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5 mb-3">
