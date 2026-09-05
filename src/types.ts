@@ -26,36 +26,15 @@ export interface Education {
   summary: string;
 }
 
-export interface Paper {
-  title: string;
-  info: string;
-  image: { src: string; alt: string };
-  link: string;
-}
-
-export interface Project {
-  image: { src: string; alt?: string };
-  alt?: string;
-  name: string;
-  info: string;
-  group: string[];
-  links?: { github?: string };
-  tags: string[];
-}
-
 export interface SiteData {
   name: string;
-  job: string;
   headline: string;
   bio: string;
-  dob: string;
   email: string;
   skills: { top: Skill[]; bottom: Skill[] };
   workexp: WorkExperience[];
   eduexp: Education[];
   links: { socials: { linkedin: { href: string }; github: { href: string } } };
-  papers: Paper[];
-  mywork: { filters: string[]; projects: Project[] };
 }
 
 export interface ProjectDetail {
