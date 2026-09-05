@@ -3,7 +3,7 @@ import alexaImg from "assets/images/projects/aws-alexa.png";
 import vectorImg from "assets/images/projects/vector.jpg";
 import exploitImg from "assets/images/projects/exploits.jpg";
 import kubeImg from "assets/images/projects/kube.jpg";
-import airImg from "assets/images/projects/vector.jpg"; // closest available
+import airImg from "assets/images/projects/airsign.png";
 import amazonImg from "assets/images/amazon.png";
 
 const defaultResponses = [
@@ -24,7 +24,6 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     badge: { label: "Amazon", color: "#fbbf24", bg: "#2e2410" },
     stats: [
       { value: "$150M+", label: "Annual Savings" },
-      { value: "1", label: "CEO Demo" },
       { value: "80%", label: "Faster Dev Cycle" },
     ],
     links: {},
