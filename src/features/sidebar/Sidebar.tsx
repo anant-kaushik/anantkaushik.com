@@ -8,57 +8,98 @@ interface SidebarProps {
   onSelect: (id: string) => void;
   onNewChat: () => void;
   newChatDisabled?: boolean;
+  isOpen?: boolean;
+  onClose?: () => void;
 }
 
-export default function Sidebar({ conversations, activeId, onSelect, onNewChat, newChatDisabled }: SidebarProps) {
+export default function Sidebar({
+  conversations,
+  activeId,
+  onSelect,
+  onNewChat,
+  newChatDisabled,
+  isOpen = false,
+  onClose,
+}: SidebarProps) {
   const mainConv = conversations[0];
   const projectConvs = conversations.slice(1);
 
+  const handleSelect = (id: string) => {
+    onSelect(id);
+    onClose?.();
+  };
+
   return (
-    <aside className="w-[260px] h-full flex flex-col bg-[#0d0d0f] border-r border-[#27272a] flex-shrink-0">
-      {/* Brand header */}
-      <div className="h-14 flex items-center gap-2.5 px-4 border-b border-[#27272a]">
-        <div className="w-7 h-7 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0">
-          <span className="text-black font-bold text-xs">A</span>
-        </div>
-        <span className="text-sm font-semibold text-[#fafafa] flex-1 min-w-0 truncate">
-          Anant Kaushik
-        </span>
-        <button
-          onClick={onNewChat}
-          disabled={newChatDisabled}
-          className="w-7 h-7 rounded-md bg-[#27272a] hover:bg-[#3f3f46] flex items-center justify-center transition-colors flex-shrink-0 disabled:opacity-40 disabled:hover:bg-[#27272a] disabled:cursor-not-allowed"
-          title={newChatDisabled ? "New chat unavailable" : "New chat"}
-        >
-          <Icons.SquarePen size={13} className="text-[#a1a1aa]" />
-        </button>
-      </div>
+    <>
+      {/* Mobile backdrop */}
+      <div
+        onClick={onClose}
+        aria-hidden="true"
+        className={cn(
+          "fixed inset-0 z-30 bg-black/60 transition-opacity md:hidden",
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        )}
+      />
 
-      {/* Conversation list */}
-      <nav className="flex-1 overflow-y-auto py-2 px-2 space-y-0.5">
-        {/* Main conversation */}
-        <ConversationItem
-          conv={mainConv}
-          isActive={activeId === mainConv.id}
-          onSelect={onSelect}
-        />
-
-        {/* Projects section */}
-        <div className="pt-3 pb-1 px-2">
-          <p className="text-[10px] font-bold text-[#52525b] tracking-widest uppercase">
-            Projects
-          </p>
+      <aside
+        className={cn(
+          "w-[260px] h-full flex flex-col bg-[#0d0d0f] border-r border-[#27272a] flex-shrink-0",
+          "fixed inset-y-0 left-0 z-40 transition-transform duration-200 ease-out",
+          "md:static md:z-auto md:translate-x-0 md:transition-none",
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        )}
+      >
+        {/* Brand header */}
+        <div className="h-14 flex items-center gap-2.5 px-4 border-b border-[#27272a]">
+          <div className="w-7 h-7 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0">
+            <span className="text-black font-bold text-xs">A</span>
+          </div>
+          <span className="text-sm font-semibold text-[#fafafa] flex-1 min-w-0 truncate">
+            Anant Kaushik
+          </span>
+          <button
+            onClick={onNewChat}
+            disabled={newChatDisabled}
+            className="w-7 h-7 rounded-md bg-[#27272a] hover:bg-[#3f3f46] flex items-center justify-center transition-colors flex-shrink-0 disabled:opacity-40 disabled:hover:bg-[#27272a] disabled:cursor-not-allowed"
+            title={newChatDisabled ? "New chat unavailable" : "New chat"}
+          >
+            <Icons.SquarePen size={13} className="text-[#a1a1aa]" />
+          </button>
+          <button
+            onClick={onClose}
+            aria-label="Close menu"
+            className="w-7 h-7 rounded-md bg-[#27272a] hover:bg-[#3f3f46] flex items-center justify-center transition-colors flex-shrink-0 md:hidden"
+          >
+            <Icons.X size={14} className="text-[#a1a1aa]" />
+          </button>
         </div>
-        {projectConvs.map((conv) => (
+
+        {/* Conversation list */}
+        <nav className="flex-1 overflow-y-auto py-2 px-2 space-y-0.5">
+          {/* Main conversation */}
           <ConversationItem
-            key={conv.id}
-            conv={conv}
-            isActive={activeId === conv.id}
-            onSelect={onSelect}
+            conv={mainConv}
+            isActive={activeId === mainConv.id}
+            onSelect={handleSelect}
           />
-        ))}
-      </nav>
-    </aside>
+
+          {/* Projects section */}
+          <div className="pt-3 pb-1 px-2">
+            <p className="text-[10px] font-bold text-[#52525b] tracking-widest uppercase">
+              Projects
+            </p>
+          </div>
+          {projectConvs.map((conv) => (
+            <ConversationItem
+              key={conv.id}
+              conv={conv}
+              isActive={activeId === conv.id}
+              onSelect={handleSelect}
+            />
+          ))}
+        </nav>
+      </aside>
+    </>
   );
 }
 

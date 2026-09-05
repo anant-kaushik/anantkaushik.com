@@ -10,9 +10,11 @@ export default function App() {
   const [activeId, setActiveId] = useState("main");
   const [msgCache, setMsgCache] = useState<Record<string, Message[]>>({});
   const [mainNonce, setMainNonce] = useState(0);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleConversationSelect = useCallback((id: string) => {
     setActiveId(id);
+    setSidebarOpen(false);
   }, []);
 
   const handleNewChat = useCallback(() => {
@@ -40,6 +42,8 @@ export default function App() {
         onSelect={handleConversationSelect}
         onNewChat={handleNewChat}
         newChatDisabled
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
       />
       <ChatInterface
         key={chatKey}
@@ -47,6 +51,7 @@ export default function App() {
         cachedMessages={msgCache[activeId] || null}
         onMessagesCached={(msgs) => handleMessagesCached(activeId, msgs)}
         unavailableMessage={CHAT_DISABLED_MESSAGE}
+        onOpenSidebar={() => setSidebarOpen(true)}
       />
     </div>
   );

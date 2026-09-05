@@ -10,9 +10,10 @@ interface ChatInterfaceProps {
   cachedMessages: Message[] | null;
   onMessagesCached: (msgs: Message[]) => void;
   unavailableMessage?: string;
+  onOpenSidebar?: () => void;
 }
 
-export default function ChatInterface({ conversation, cachedMessages, onMessagesCached, unavailableMessage }: ChatInterfaceProps) {
+export default function ChatInterface({ conversation, cachedMessages, onMessagesCached, unavailableMessage, onOpenSidebar }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>(
     () => cachedMessages || conversation.initialMessages
   );
@@ -65,7 +66,7 @@ export default function ChatInterface({ conversation, cachedMessages, onMessages
 
   return (
     <div className="flex flex-col flex-1 h-full min-w-0">
-      <ChatHeader />
+      <ChatHeader onOpenSidebar={onOpenSidebar} />
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto px-6 py-5 space-y-4">

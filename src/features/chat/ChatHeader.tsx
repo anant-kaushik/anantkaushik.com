@@ -1,11 +1,23 @@
-import { Download } from "lucide-react";
+import { Download, Menu } from "lucide-react";
 import profile from "assets/images/profile.jpg";
 import data from "data/data";
 import resumePdf from "assets/resume/Resume.pdf";
 
-export default function ChatHeader() {
+interface ChatHeaderProps {
+  onOpenSidebar?: () => void;
+}
+
+export default function ChatHeader({ onOpenSidebar }: ChatHeaderProps) {
   return (
-    <header className="h-14 flex items-center border-b border-[#27272a] bg-[#09090b] px-6 flex-shrink-0">
+    <header className="h-14 flex items-center border-b border-[#27272a] bg-[#09090b] px-4 md:px-6 flex-shrink-0">
+      <button
+        onClick={onOpenSidebar}
+        aria-label="Open menu"
+        className="w-8 h-8 -ml-1 mr-1 rounded-md hover:bg-[#18181b] flex items-center justify-center transition-colors flex-shrink-0 md:hidden"
+      >
+        <Menu size={18} className="text-[#a1a1aa]" />
+      </button>
+
       <div className="flex items-center gap-3 flex-1 min-w-0">
         <div className="relative flex-shrink-0">
           <img
