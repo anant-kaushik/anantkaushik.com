@@ -69,7 +69,7 @@ export default function ChatInterface({ conversation, cachedMessages, onMessages
       <ChatHeader onOpenSidebar={onOpenSidebar} />
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
+      <div className="flex-1 overflow-y-auto scrollbar-thin px-6 py-5 space-y-4">
         <div className="max-w-[860px] mx-auto space-y-4">
           {messages.map((msg) => (
             <MessageBubble key={msg.id} message={msg} />

@@ -18,7 +18,7 @@ export default function ChatHeader({ onOpenSidebar }: ChatHeaderProps) {
         <Menu size={18} className="text-[#a1a1aa]" />
       </button>
 
-      <div className="flex items-center gap-3 flex-1 min-w-0">
+      <div className="flex items-center gap-3 flex-1 min-w-0 pr-3">
         <div className="relative flex-shrink-0">
           <img
             src={profile}

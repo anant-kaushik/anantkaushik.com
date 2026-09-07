@@ -75,7 +75,7 @@ export default function Sidebar({
         </div>
 
         {/* Conversation list */}
-        <nav className="flex-1 overflow-y-auto py-2 px-2 space-y-0.5">
+        <nav className="flex-1 overflow-y-auto scrollbar-thin py-2 px-2 space-y-0.5">
           {/* Main conversation */}
           <ConversationItem
             conv={mainConv}
