@@ -17,7 +17,7 @@ export default function ChatInput({ value, onChange, onSend, disabled, unavailab
   };
 
   return (
-    <div className="border-t border-[#27272a] bg-[#09090b] px-4 md:px-6 py-3 flex-shrink-0">
+    <div className="border-t border-[#27272a] bg-[#09090b] px-4 md:px-6 py-3 flex-shrink-0 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
       <div className="flex gap-2 items-center relative">
         <input
           type="text"

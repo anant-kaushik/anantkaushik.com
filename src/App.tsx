@@ -35,7 +35,7 @@ export default function App() {
   const chatKey = activeId === "main" ? `main-${mainNonce}` : activeId;
 
   return (
-    <div className="flex h-screen bg-[#09090b] overflow-hidden">
+    <div className="flex h-app bg-[#09090b] overflow-hidden">
       <Sidebar
         conversations={CONVERSATIONS}
         activeId={activeId}

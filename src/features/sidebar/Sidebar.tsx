@@ -43,9 +43,9 @@ export default function Sidebar({
 
       <aside
         className={cn(
-          "w-[260px] h-full flex flex-col bg-[#0d0d0f] border-r border-[#27272a] flex-shrink-0",
-          "fixed inset-y-0 left-0 z-40 transition-transform duration-200 ease-out",
-          "md:static md:z-auto md:translate-x-0 md:transition-none",
+          "w-[260px] flex flex-col bg-[#0d0d0f] border-r border-[#27272a] flex-shrink-0",
+          "fixed top-0 left-0 h-app z-40 transition-transform duration-200 ease-out",
+          "md:static md:h-full md:z-auto md:translate-x-0 md:transition-none",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
